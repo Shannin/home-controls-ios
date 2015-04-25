@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f6i-cG-Mpi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f6i-cG-Mpi">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -68,17 +68,50 @@
             </objects>
             <point key="canvasLocation" x="976" y="-87"/>
         </scene>
-        <!--Lights!-->
+        <!--Scenes List Table View Controller-->
+        <scene sceneID="Jdf-zn-xmu">
+            <objects>
+                <tableViewController id="evy-bv-isd" customClass="ScenesListTableViewController" customModule="Home_Controls" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ajm-5s-jhS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="CjD-ja-ngt" style="IBUITableViewCellStyleDefault" id="mo6-94-h25">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mo6-94-h25" id="3h2-ID-n2R">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CjD-ja-ngt">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="evy-bv-isd" id="SfW-CZ-PdO"/>
+                            <outlet property="delegate" destination="evy-bv-isd" id="eJx-P4-JXJ"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fnt-qp-a17" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976" y="-883"/>
+        </scene>
+        <!--Hue Options-->
         <scene sceneID="j16-ov-GYS">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Z9-gY-s3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="e3c-MV-g3t" customClass="ScenesListTableViewController" customModule="Home_Controls" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eJg-ES-qEa">
+                <tableViewController id="e3c-MV-g3t" customClass="HueOptionsTableViewController" customModule="Home_Controls" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eJg-ES-qEa" customClass="HueOp">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="Kt3-Sf-hkv" style="IBUITableViewCellStyleDefault" id="MCb-b6-ayY">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="Kt3-Sf-hkv" style="IBUITableViewCellStyleDefault" id="MCb-b6-ayY">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MCb-b6-ayY" id="HeO-FV-Dn1">
@@ -92,6 +125,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="evy-bv-isd" kind="show" identifier="ShowHueSceneSelector" id="Wnt-6Z-qiA"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -99,7 +135,7 @@
                             <outlet property="delegate" destination="e3c-MV-g3t" id="IQh-VO-Eby"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Lights!" id="20y-Uj-A74">
+                    <navigationItem key="navigationItem" title="Hue Options" id="20y-Uj-A74">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="5eO-nc-0Ad">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nub-bY-0CH">
                                 <rect key="frame" x="16" y="7" width="62" height="30"/>
@@ -114,8 +150,9 @@
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Z9-gY-s3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="976" y="-883"/>
+            <point key="canvasLocation" x="156" y="-883"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mxX-Yg-Gso">
@@ -131,7 +168,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Obb-Fv-oiT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="156" y="-883"/>
+            <point key="canvasLocation" x="-664" y="-883"/>
         </scene>
         <!--Bridge Selection View Controller-->
         <scene sceneID="UUE-oT-gum">

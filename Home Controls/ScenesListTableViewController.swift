@@ -9,17 +9,9 @@
 import UIKit
 
 class ScenesListTableViewController: UITableViewController {
+    var optionDetails: [String: String]?
+    var currentOptionValue: String?
     var scenes = [NSObject: AnyObject]()
-    
-    func localConnection() {
-        loadConnectedBridgeValues()
-    }
-    
-    func noLocalConnection() {
-        self.scenes = [NSObject: AnyObject]()
-        self.tableView.reloadData()
-        
-    }
     
     func loadConnectedBridgeValues() {
         let cache = PHBridgeResourcesReader.readBridgeResourcesCache()
@@ -42,11 +34,20 @@ class ScenesListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let notificationManager = PHNotificationManager.defaultManager()
-        notificationManager.registerObject(self, withSelector: "localConnection", forNotification: LOCAL_CONNECTION_NOTIFICATION)
-        notificationManager.registerObject(self, withSelector: "noLocalConnection", forNotification: NO_LOCAL_CONNECTION_NOTIFICATION)
+        let hueOptionKey: String = optionDetails!["key"]!
+        var sharedDefaults = NSUserDefaults(suiteName: "group.camperoo.test")
+        self.currentOptionValue = sharedDefaults?.objectForKey(hueOptionKey) as? String
         
-        noLocalConnection()
+        loadConnectedBridgeValues()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        let hueOptionKey: String = optionDetails!["key"]!
+        var sharedDefaults = NSUserDefaults(suiteName: "group.camperoo.test")
+        sharedDefaults?.setObject(self.currentOptionValue, forKey: hueOptionKey)
+        sharedDefaults?.synchronize()
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -72,15 +73,20 @@ class ScenesListTableViewController: UITableViewController {
         var scene = self.scenes[self.scenes.keys.array[indexPath.row]] as! PHScene
         cell.textLabel?.text = scene.name
         
+        if scene.identifier == self.currentOptionValue {
+            cell.accessoryType = .Checkmark
+        } else {
+            cell.accessoryType = .None
+        }
+        
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let sceneId = self.scenes.keys.array[indexPath.row] as? String
+        self.currentOptionValue = sceneId
         
-        var sharedDefaults = NSUserDefaults(suiteName: "group.camperoo.test")
-        sharedDefaults?.setObject(sceneId, forKey: "ImHomeLightScene")
-        sharedDefaults?.synchronize()
+        self.tableView.reloadData()
     }
 
 }
