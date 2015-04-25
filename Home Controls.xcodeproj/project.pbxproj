@@ -1,0 +1,752 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F749BADB1ADC2D8400DA6028 /* HueSDK_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F749BADA1ADC2D8400DA6028 /* HueSDK_iOS.framework */; };
+		F749BADC1ADC2D8400DA6028 /* HueSDK_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F749BADA1ADC2D8400DA6028 /* HueSDK_iOS.framework */; };
+		F749BAF01ADC2DA400DA6028 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F749BAE21ADC2DA400DA6028 /* DDAbstractDatabaseLogger.m */; };
+		F749BAF11ADC2DA400DA6028 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F749BAE21ADC2DA400DA6028 /* DDAbstractDatabaseLogger.m */; };
+		F749BAF21ADC2DA400DA6028 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F749BAE41ADC2DA400DA6028 /* DDASLLogger.m */; };
+		F749BAF31ADC2DA400DA6028 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F749BAE41ADC2DA400DA6028 /* DDASLLogger.m */; };
+		F749BAF41ADC2DA400DA6028 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F749BAE61ADC2DA400DA6028 /* DDFileLogger.m */; };
+		F749BAF51ADC2DA400DA6028 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F749BAE61ADC2DA400DA6028 /* DDFileLogger.m */; };
+		F749BAF61ADC2DA400DA6028 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = F749BAE81ADC2DA400DA6028 /* DDLog.m */; };
+		F749BAF71ADC2DA400DA6028 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = F749BAE81ADC2DA400DA6028 /* DDLog.m */; };
+		F749BAF81ADC2DA400DA6028 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F749BAEA1ADC2DA400DA6028 /* DDTTYLogger.m */; };
+		F749BAF91ADC2DA400DA6028 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F749BAEA1ADC2DA400DA6028 /* DDTTYLogger.m */; };
+		F749BAFA1ADC2DA400DA6028 /* ContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F749BAED1ADC2DA400DA6028 /* ContextFilterLogFormatter.m */; };
+		F749BAFB1ADC2DA400DA6028 /* ContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F749BAED1ADC2DA400DA6028 /* ContextFilterLogFormatter.m */; };
+		F749BAFC1ADC2DA400DA6028 /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F749BAEF1ADC2DA400DA6028 /* DispatchQueueLogFormatter.m */; };
+		F749BAFD1ADC2DA400DA6028 /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F749BAEF1ADC2DA400DA6028 /* DispatchQueueLogFormatter.m */; };
+		F749BB031ADC3CD800DA6028 /* BridgePushLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F749BB011ADC3CD800DA6028 /* BridgePushLinkViewController.swift */; };
+		F749BB041ADC3CD800DA6028 /* BridgeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F749BB021ADC3CD800DA6028 /* BridgeSelectionViewController.swift */; };
+		F758E6E01AE863660059A528 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F758E6DF1AE863660059A528 /* Reachability.m */; };
+		F758E6E11AE863660059A528 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F758E6DF1AE863660059A528 /* Reachability.m */; };
+		F76332831ADB721600B1CBDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76332821ADB721600B1CBDC /* AppDelegate.swift */; };
+		F76332851ADB721600B1CBDC /* DoorSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76332841ADB721600B1CBDC /* DoorSettingsViewController.swift */; };
+		F76332881ADB721600B1CBDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F76332861ADB721600B1CBDC /* Main.storyboard */; };
+		F763328A1ADB721600B1CBDC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F76332891ADB721600B1CBDC /* Images.xcassets */; };
+		F763328D1ADB721600B1CBDC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F763328B1ADB721600B1CBDC /* LaunchScreen.xib */; };
+		F76332991ADB721600B1CBDC /* Home_ControlsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76332981ADB721600B1CBDC /* Home_ControlsTests.swift */; };
+		F76332A91ADB722D00B1CBDC /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76332A81ADB722D00B1CBDC /* NotificationCenter.framework */; };
+		F76332AE1ADB722D00B1CBDC /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76332AD1ADB722D00B1CBDC /* TodayViewController.swift */; };
+		F76332B01ADB722D00B1CBDC /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F76332AF1ADB722D00B1CBDC /* MainInterface.storyboard */; };
+		F76332B31ADB722D00B1CBDC /* TodayWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F76332A61ADB722D00B1CBDC /* TodayWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F79AD72B1ADD81D700FD426E /* HueAPIWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79AD72A1ADD81D700FD426E /* HueAPIWrapper.swift */; };
+		F7B49C0F1ADCD63B00AD07B1 /* ScenesListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B49C0E1ADCD63B00AD07B1 /* ScenesListTableViewController.swift */; };
+		F7EE83E41ADC7CE600EA4EAD /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EE83E31ADC7CE600EA4EAD /* LoadingViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F76332931ADB721600B1CBDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F76332751ADB721600B1CBDC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F763327C1ADB721600B1CBDC;
+			remoteInfo = "Home Controls";
+		};
+		F76332B11ADB722D00B1CBDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F76332751ADB721600B1CBDC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F76332A51ADB722D00B1CBDC;
+			remoteInfo = TodayWidget;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F76332B71ADB722D00B1CBDC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F76332B31ADB722D00B1CBDC /* TodayWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F749BADA1ADC2D8400DA6028 /* HueSDK_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HueSDK_iOS.framework; sourceTree = "<group>"; };
+		F749BAE11ADC2DA400DA6028 /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
+		F749BAE21ADC2DA400DA6028 /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
+		F749BAE31ADC2DA400DA6028 /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
+		F749BAE41ADC2DA400DA6028 /* DDASLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDASLLogger.m; sourceTree = "<group>"; };
+		F749BAE51ADC2DA400DA6028 /* DDFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
+		F749BAE61ADC2DA400DA6028 /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
+		F749BAE71ADC2DA400DA6028 /* DDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLog.h; sourceTree = "<group>"; };
+		F749BAE81ADC2DA400DA6028 /* DDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
+		F749BAE91ADC2DA400DA6028 /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
+		F749BAEA1ADC2DA400DA6028 /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
+		F749BAEC1ADC2DA400DA6028 /* ContextFilterLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextFilterLogFormatter.h; sourceTree = "<group>"; };
+		F749BAED1ADC2DA400DA6028 /* ContextFilterLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextFilterLogFormatter.m; sourceTree = "<group>"; };
+		F749BAEE1ADC2DA400DA6028 /* DispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DispatchQueueLogFormatter.h; sourceTree = "<group>"; };
+		F749BAEF1ADC2DA400DA6028 /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
+		F749BAFE1ADC2E7100DA6028 /* TodayWidget-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TodayWidget-Bridging-Header.h"; sourceTree = "<group>"; };
+		F749BB001ADC36EE00DA6028 /* HomeControls-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HomeControls-Bridging-Header.h"; sourceTree = "<group>"; };
+		F749BB011ADC3CD800DA6028 /* BridgePushLinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgePushLinkViewController.swift; sourceTree = "<group>"; };
+		F749BB021ADC3CD800DA6028 /* BridgeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeSelectionViewController.swift; sourceTree = "<group>"; };
+		F758E6DE1AE863660059A528 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = "Home Controls/Reachability.h"; sourceTree = "<group>"; };
+		F758E6DF1AE863660059A528 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = "Home Controls/Reachability.m"; sourceTree = "<group>"; };
+		F763327D1ADB721600B1CBDC /* Home Controls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Home Controls.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F76332811ADB721600B1CBDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F76332821ADB721600B1CBDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F76332841ADB721600B1CBDC /* DoorSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorSettingsViewController.swift; sourceTree = "<group>"; };
+		F76332871ADB721600B1CBDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F76332891ADB721600B1CBDC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F763328C1ADB721600B1CBDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F76332921ADB721600B1CBDC /* Home ControlsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Home ControlsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F76332971ADB721600B1CBDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F76332981ADB721600B1CBDC /* Home_ControlsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home_ControlsTests.swift; sourceTree = "<group>"; };
+		F76332A61ADB722D00B1CBDC /* TodayWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F76332A81ADB722D00B1CBDC /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		F76332AC1ADB722D00B1CBDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F76332AD1ADB722D00B1CBDC /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		F76332AF1ADB722D00B1CBDC /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		F79AD72A1ADD81D700FD426E /* HueAPIWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HueAPIWrapper.swift; sourceTree = "<group>"; };
+		F7B49C0E1ADCD63B00AD07B1 /* ScenesListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScenesListTableViewController.swift; sourceTree = "<group>"; };
+		F7EE83E31ADC7CE600EA4EAD /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		F7EE83E51ADC81F700EA4EAD /* Home Controls.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Home Controls.entitlements"; sourceTree = "<group>"; };
+		F7EE83E61ADC825100EA4EAD /* TodayWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TodayWidget.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F763327A1ADB721600B1CBDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F749BADB1ADC2D8400DA6028 /* HueSDK_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F763328F1ADB721600B1CBDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F76332A31ADB722D00B1CBDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F749BADC1ADC2D8400DA6028 /* HueSDK_iOS.framework in Frameworks */,
+				F76332A91ADB722D00B1CBDC /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F749BAE01ADC2DA400DA6028 /* Lumberjack */ = {
+			isa = PBXGroup;
+			children = (
+				F749BAE11ADC2DA400DA6028 /* DDAbstractDatabaseLogger.h */,
+				F749BAE21ADC2DA400DA6028 /* DDAbstractDatabaseLogger.m */,
+				F749BAE31ADC2DA400DA6028 /* DDASLLogger.h */,
+				F749BAE41ADC2DA400DA6028 /* DDASLLogger.m */,
+				F749BAE51ADC2DA400DA6028 /* DDFileLogger.h */,
+				F749BAE61ADC2DA400DA6028 /* DDFileLogger.m */,
+				F749BAE71ADC2DA400DA6028 /* DDLog.h */,
+				F749BAE81ADC2DA400DA6028 /* DDLog.m */,
+				F749BAE91ADC2DA400DA6028 /* DDTTYLogger.h */,
+				F749BAEA1ADC2DA400DA6028 /* DDTTYLogger.m */,
+				F749BAEB1ADC2DA400DA6028 /* Extensions */,
+			);
+			path = Lumberjack;
+			sourceTree = "<group>";
+		};
+		F749BAEB1ADC2DA400DA6028 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F749BAEC1ADC2DA400DA6028 /* ContextFilterLogFormatter.h */,
+				F749BAED1ADC2DA400DA6028 /* ContextFilterLogFormatter.m */,
+				F749BAEE1ADC2DA400DA6028 /* DispatchQueueLogFormatter.h */,
+				F749BAEF1ADC2DA400DA6028 /* DispatchQueueLogFormatter.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F758E6E21AE86B9A0059A528 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				F758E6DE1AE863660059A528 /* Reachability.h */,
+				F758E6DF1AE863660059A528 /* Reachability.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+		F76332741ADB721600B1CBDC = {
+			isa = PBXGroup;
+			children = (
+				F763327F1ADB721600B1CBDC /* Home Controls */,
+				F76332951ADB721600B1CBDC /* Home ControlsTests */,
+				F76332AA1ADB722D00B1CBDC /* TodayWidget */,
+				F76332A71ADB722D00B1CBDC /* Frameworks */,
+				F763327E1ADB721600B1CBDC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F763327E1ADB721600B1CBDC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F763327D1ADB721600B1CBDC /* Home Controls.app */,
+				F76332921ADB721600B1CBDC /* Home ControlsTests.xctest */,
+				F76332A61ADB722D00B1CBDC /* TodayWidget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F763327F1ADB721600B1CBDC /* Home Controls */ = {
+			isa = PBXGroup;
+			children = (
+				F7B49C0B1ADCD47400AD07B1 /* Hue Setup */,
+				F76332821ADB721600B1CBDC /* AppDelegate.swift */,
+				F76332841ADB721600B1CBDC /* DoorSettingsViewController.swift */,
+				F7B49C0E1ADCD63B00AD07B1 /* ScenesListTableViewController.swift */,
+				F76332861ADB721600B1CBDC /* Main.storyboard */,
+				F76332891ADB721600B1CBDC /* Images.xcassets */,
+				F763328B1ADB721600B1CBDC /* LaunchScreen.xib */,
+				F76332801ADB721600B1CBDC /* Supporting Files */,
+			);
+			path = "Home Controls";
+			sourceTree = "<group>";
+		};
+		F76332801ADB721600B1CBDC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7EE83E51ADC81F700EA4EAD /* Home Controls.entitlements */,
+				F76332811ADB721600B1CBDC /* Info.plist */,
+				F749BB001ADC36EE00DA6028 /* HomeControls-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F76332951ADB721600B1CBDC /* Home ControlsTests */ = {
+			isa = PBXGroup;
+			children = (
+				F76332981ADB721600B1CBDC /* Home_ControlsTests.swift */,
+				F76332961ADB721600B1CBDC /* Supporting Files */,
+			);
+			path = "Home ControlsTests";
+			sourceTree = "<group>";
+		};
+		F76332961ADB721600B1CBDC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F76332971ADB721600B1CBDC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F76332A71ADB722D00B1CBDC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F758E6E21AE86B9A0059A528 /* Reachability */,
+				F749BAE01ADC2DA400DA6028 /* Lumberjack */,
+				F749BADA1ADC2D8400DA6028 /* HueSDK_iOS.framework */,
+				F76332A81ADB722D00B1CBDC /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F76332AA1ADB722D00B1CBDC /* TodayWidget */ = {
+			isa = PBXGroup;
+			children = (
+				F79AD72A1ADD81D700FD426E /* HueAPIWrapper.swift */,
+				F76332AD1ADB722D00B1CBDC /* TodayViewController.swift */,
+				F76332AF1ADB722D00B1CBDC /* MainInterface.storyboard */,
+				F76332AB1ADB722D00B1CBDC /* Supporting Files */,
+			);
+			path = TodayWidget;
+			sourceTree = "<group>";
+		};
+		F76332AB1ADB722D00B1CBDC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F7EE83E61ADC825100EA4EAD /* TodayWidget.entitlements */,
+				F76332AC1ADB722D00B1CBDC /* Info.plist */,
+				F749BAFE1ADC2E7100DA6028 /* TodayWidget-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F7B49C0B1ADCD47400AD07B1 /* Hue Setup */ = {
+			isa = PBXGroup;
+			children = (
+				F749BB011ADC3CD800DA6028 /* BridgePushLinkViewController.swift */,
+				F749BB021ADC3CD800DA6028 /* BridgeSelectionViewController.swift */,
+				F7EE83E31ADC7CE600EA4EAD /* LoadingViewController.swift */,
+			);
+			name = "Hue Setup";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F763327C1ADB721600B1CBDC /* Home Controls */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F763329C1ADB721600B1CBDC /* Build configuration list for PBXNativeTarget "Home Controls" */;
+			buildPhases = (
+				F76332791ADB721600B1CBDC /* Sources */,
+				F763327A1ADB721600B1CBDC /* Frameworks */,
+				F763327B1ADB721600B1CBDC /* Resources */,
+				F76332B71ADB722D00B1CBDC /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F76332B21ADB722D00B1CBDC /* PBXTargetDependency */,
+			);
+			name = "Home Controls";
+			productName = "Home Controls";
+			productReference = F763327D1ADB721600B1CBDC /* Home Controls.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F76332911ADB721600B1CBDC /* Home ControlsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F763329F1ADB721600B1CBDC /* Build configuration list for PBXNativeTarget "Home ControlsTests" */;
+			buildPhases = (
+				F763328E1ADB721600B1CBDC /* Sources */,
+				F763328F1ADB721600B1CBDC /* Frameworks */,
+				F76332901ADB721600B1CBDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F76332941ADB721600B1CBDC /* PBXTargetDependency */,
+			);
+			name = "Home ControlsTests";
+			productName = "Home ControlsTests";
+			productReference = F76332921ADB721600B1CBDC /* Home ControlsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F76332A51ADB722D00B1CBDC /* TodayWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F76332B41ADB722D00B1CBDC /* Build configuration list for PBXNativeTarget "TodayWidget" */;
+			buildPhases = (
+				F76332A21ADB722D00B1CBDC /* Sources */,
+				F76332A31ADB722D00B1CBDC /* Frameworks */,
+				F76332A41ADB722D00B1CBDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TodayWidget;
+			productName = TodayWidget;
+			productReference = F76332A61ADB722D00B1CBDC /* TodayWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F76332751ADB721600B1CBDC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = Shannin;
+				TargetAttributes = {
+					F763327C1ADB721600B1CBDC = {
+						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 75QQK65J48;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					F76332911ADB721600B1CBDC = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = F763327C1ADB721600B1CBDC;
+					};
+					F76332A51ADB722D00B1CBDC = {
+						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 75QQK65J48;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = F76332781ADB721600B1CBDC /* Build configuration list for PBXProject "Home Controls" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F76332741ADB721600B1CBDC;
+			productRefGroup = F763327E1ADB721600B1CBDC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F763327C1ADB721600B1CBDC /* Home Controls */,
+				F76332911ADB721600B1CBDC /* Home ControlsTests */,
+				F76332A51ADB722D00B1CBDC /* TodayWidget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F763327B1ADB721600B1CBDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F76332881ADB721600B1CBDC /* Main.storyboard in Resources */,
+				F763328D1ADB721600B1CBDC /* LaunchScreen.xib in Resources */,
+				F763328A1ADB721600B1CBDC /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F76332901ADB721600B1CBDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F76332A41ADB722D00B1CBDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F76332B01ADB722D00B1CBDC /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F76332791ADB721600B1CBDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F749BAF61ADC2DA400DA6028 /* DDLog.m in Sources */,
+				F749BAF21ADC2DA400DA6028 /* DDASLLogger.m in Sources */,
+				F76332851ADB721600B1CBDC /* DoorSettingsViewController.swift in Sources */,
+				F76332831ADB721600B1CBDC /* AppDelegate.swift in Sources */,
+				F749BAFC1ADC2DA400DA6028 /* DispatchQueueLogFormatter.m in Sources */,
+				F749BAF01ADC2DA400DA6028 /* DDAbstractDatabaseLogger.m in Sources */,
+				F749BAF81ADC2DA400DA6028 /* DDTTYLogger.m in Sources */,
+				F749BB041ADC3CD800DA6028 /* BridgeSelectionViewController.swift in Sources */,
+				F7B49C0F1ADCD63B00AD07B1 /* ScenesListTableViewController.swift in Sources */,
+				F749BAF41ADC2DA400DA6028 /* DDFileLogger.m in Sources */,
+				F758E6E01AE863660059A528 /* Reachability.m in Sources */,
+				F749BAFA1ADC2DA400DA6028 /* ContextFilterLogFormatter.m in Sources */,
+				F749BB031ADC3CD800DA6028 /* BridgePushLinkViewController.swift in Sources */,
+				F7EE83E41ADC7CE600EA4EAD /* LoadingViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F763328E1ADB721600B1CBDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F76332991ADB721600B1CBDC /* Home_ControlsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F76332A21ADB722D00B1CBDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F79AD72B1ADD81D700FD426E /* HueAPIWrapper.swift in Sources */,
+				F749BAF71ADC2DA400DA6028 /* DDLog.m in Sources */,
+				F749BAFD1ADC2DA400DA6028 /* DispatchQueueLogFormatter.m in Sources */,
+				F749BAFB1ADC2DA400DA6028 /* ContextFilterLogFormatter.m in Sources */,
+				F758E6E11AE863660059A528 /* Reachability.m in Sources */,
+				F749BAF11ADC2DA400DA6028 /* DDAbstractDatabaseLogger.m in Sources */,
+				F749BAF51ADC2DA400DA6028 /* DDFileLogger.m in Sources */,
+				F749BAF91ADC2DA400DA6028 /* DDTTYLogger.m in Sources */,
+				F76332AE1ADB722D00B1CBDC /* TodayViewController.swift in Sources */,
+				F749BAF31ADC2DA400DA6028 /* DDASLLogger.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F76332941ADB721600B1CBDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F763327C1ADB721600B1CBDC /* Home Controls */;
+			targetProxy = F76332931ADB721600B1CBDC /* PBXContainerItemProxy */;
+		};
+		F76332B21ADB722D00B1CBDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F76332A51ADB722D00B1CBDC /* TodayWidget */;
+			targetProxy = F76332B11ADB722D00B1CBDC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F76332861ADB721600B1CBDC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F76332871ADB721600B1CBDC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F763328B1ADB721600B1CBDC /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F763328C1ADB721600B1CBDC /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F763329A1ADB721600B1CBDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F763329B1ADB721600B1CBDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F763329D1ADB721600B1CBDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Home Controls/Home Controls.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Home Controls/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Home Controls/HomeControls-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		F763329E1ADB721600B1CBDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Home Controls/Home Controls.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "Home Controls/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Home Controls/HomeControls-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		F76332A01ADB721600B1CBDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Home ControlsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Home Controls.app/Home Controls";
+			};
+			name = Debug;
+		};
+		F76332A11ADB721600B1CBDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Home ControlsTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Home Controls.app/Home Controls";
+			};
+			name = Release;
+		};
+		F76332B51ADB722D00B1CBDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TodayWidget/TodayWidget.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TodayWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TodayWidget/TodayWidget-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		F76332B61ADB722D00B1CBDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TodayWidget/TodayWidget.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = TodayWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TodayWidget/TodayWidget-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F76332781ADB721600B1CBDC /* Build configuration list for PBXProject "Home Controls" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F763329A1ADB721600B1CBDC /* Debug */,
+				F763329B1ADB721600B1CBDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F763329C1ADB721600B1CBDC /* Build configuration list for PBXNativeTarget "Home Controls" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F763329D1ADB721600B1CBDC /* Debug */,
+				F763329E1ADB721600B1CBDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F763329F1ADB721600B1CBDC /* Build configuration list for PBXNativeTarget "Home ControlsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F76332A01ADB721600B1CBDC /* Debug */,
+				F76332A11ADB721600B1CBDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F76332B41ADB722D00B1CBDC /* Build configuration list for PBXNativeTarget "TodayWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F76332B51ADB722D00B1CBDC /* Debug */,
+				F76332B61ADB722D00B1CBDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F76332751ADB721600B1CBDC /* Project object */;
+}
