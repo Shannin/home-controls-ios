@@ -13,8 +13,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     let WIFI_ATTEMPT_DELAY = 2.0;
     let WIFI_ATTEMPT_TRIES = 10;
     
+    @IBOutlet var imHomeContainer: UIView?
     @IBOutlet var imHomeButton: UIButton?
     
+    @IBOutlet var hueControlsContainer: UIView?
     
     func userDefaultsChanged(notification: NSNotification) {
         
@@ -29,7 +31,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.preferredContentSize = CGSizeMake(320, 100);
+        self.preferredContentSize = CGSizeMake(320, 100)
+        
+        self.imHomeContainer?.hidden = true
+        self.hueControlsContainer?.hidden = false
     }
     
     func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)!) {

@@ -16,22 +16,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcZ-ns-oNF">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68H-oJ-A09">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
-                                <color key="backgroundColor" red="0.63598497929999998" green="0.1183855578" blue="0.13841260599999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="I'm home">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="imHomeButtonAction" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="gBG-Dq-cDU"/>
-                                </connections>
-                            </button>
+                                <color key="backgroundColor" red="1" green="0.76078431369999999" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SgM-Ee-DiY">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dcZ-ns-oNF">
+                                        <rect key="frame" x="10" y="10" width="300" height="100"/>
+                                        <color key="backgroundColor" red="0.63598497929999998" green="0.1183855578" blue="0.13841260599999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="I'm home">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="imHomeButtonAction" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="gBG-Dq-cDU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1843137255" green="0.31764705879999999" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="dcZ-ns-oNF" firstAttribute="leading" secondItem="SgM-Ee-DiY" secondAttribute="leading" constant="10" id="HDG-2n-toA"/>
+                                    <constraint firstAttribute="trailing" secondItem="dcZ-ns-oNF" secondAttribute="trailing" constant="10" id="SOh-gK-KWI"/>
+                                    <constraint firstItem="dcZ-ns-oNF" firstAttribute="top" secondItem="SgM-Ee-DiY" secondAttribute="top" constant="10" id="l7X-kP-FQG"/>
+                                    <constraint firstAttribute="bottom" secondItem="dcZ-ns-oNF" secondAttribute="bottom" constant="10" id="y2D-Tu-dQp"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="dcZ-ns-oNF" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="37Z-Xf-m0b"/>
-                            <constraint firstItem="dcZ-ns-oNF" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="KZm-nU-yco"/>
-                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="dcZ-ns-oNF" secondAttribute="bottom" id="iIs-SV-NDX"/>
-                            <constraint firstAttribute="trailing" secondItem="dcZ-ns-oNF" secondAttribute="trailing" id="n05-0a-BUG"/>
+                            <constraint firstAttribute="trailing" secondItem="SgM-Ee-DiY" secondAttribute="trailing" id="3gd-Jm-PtA"/>
+                            <constraint firstAttribute="trailing" secondItem="68H-oJ-A09" secondAttribute="trailing" id="BrU-AZ-ssq"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="SgM-Ee-DiY" secondAttribute="bottom" id="QaU-xZ-Zns"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="68H-oJ-A09" secondAttribute="bottom" id="bnc-uG-Kqa"/>
+                            <constraint firstItem="68H-oJ-A09" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="gZi-qI-aPP"/>
+                            <constraint firstItem="SgM-Ee-DiY" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="lSk-Oy-TtC"/>
+                            <constraint firstItem="SgM-Ee-DiY" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="wcF-5C-YDE"/>
+                            <constraint firstItem="68H-oJ-A09" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="wce-rz-Wxs"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -41,7 +61,9 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="120"/>
                     <connections>
+                        <outlet property="hueControlsContainer" destination="68H-oJ-A09" id="CqL-G2-Obl"/>
                         <outlet property="imHomeButton" destination="dcZ-ns-oNF" id="77Z-bo-4fE"/>
+                        <outlet property="imHomeContainer" destination="SgM-Ee-DiY" id="eJZ-BZ-Lvm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>

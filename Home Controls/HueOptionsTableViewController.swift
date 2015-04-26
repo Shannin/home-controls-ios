@@ -10,7 +10,7 @@ import UIKit
 
 class HueOptionsTableViewController: UITableViewController {
     
-    var availableOptions: [[String: AnyObject]] = [["key": "ImHomeLightScene", "string": "I'm Home Scene", "max_scenes": 1]]
+    var availableOptions: [[String: AnyObject]] = [["key": "ImHomeLightScene", "string": "I'm Home Scene", "max_scenes": 1], ["key": "HueControlsScenes", "string": "Hue Controls", "max_scenes": 4]]
 
     override func viewDidLoad() {
         super.viewDidLoad()
