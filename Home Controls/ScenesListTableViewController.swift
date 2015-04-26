@@ -83,12 +83,19 @@ class ScenesListTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if self.optionValues.count == maxScenes {
-            self.optionValues.removeAtIndex(0)
+        let sceneId = self.scenes.keys.array[indexPath.row] as! String
+        if contains(self.optionValues, sceneId) {
+            // Remove from values array
+            self.optionValues.removeAtIndex(find(self.optionValues, sceneId)!)
+        } else {
+            // Insert into values array
+            if self.optionValues.count == maxScenes {
+                self.optionValues.removeAtIndex(0)
+            }
+            
+            self.optionValues.append(sceneId)
         }
         
-        let sceneId = self.scenes.keys.array[indexPath.row] as? String
-        self.optionValues.append(sceneId!)
         self.tableView.reloadData()
     }
 
