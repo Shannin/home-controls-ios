@@ -98,9 +98,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     func turnOnLightsNowHome() {
-        if getUserDefaultWithKey("ImHomeLightScene") != nil {
-            let sceneId = getUserDefaultWithKey("ImHomeLightScene") as! String
-            
+        var scenesArray = getUserDefaultWithKey("ImHomeLightScene") as? [String]
+        if scenesArray != nil && scenesArray!.count >= 1 {
+            let sceneId: String = scenesArray![0]
             var reachability = Reachability.reachabilityForInternetConnection()
             reachability.startNotifier()
             attemptLightsOnWithScene(sceneId, reachability: reachability, attempt: 0)

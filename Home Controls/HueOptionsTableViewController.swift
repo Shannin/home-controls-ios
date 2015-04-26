@@ -10,7 +10,7 @@ import UIKit
 
 class HueOptionsTableViewController: UITableViewController {
     
-    var availableOptions: [[String: String]] = [["key": "ImHomeLightScene", "string": "I'm Home Scene"]]
+    var availableOptions: [[String: AnyObject]] = [["key": "ImHomeLightScene", "string": "I'm Home Scene", "max_scenes": 1]]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +33,9 @@ class HueOptionsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
         
-        var option: [String: String] = availableOptions[indexPath.row]
+        var option: [String: AnyObject] = availableOptions[indexPath.row]
         
-        cell.textLabel?.text = option["string"]
+        cell.textLabel?.text = option["string"] as? String
 
         return cell
     }
@@ -51,7 +51,8 @@ class HueOptionsTableViewController: UITableViewController {
             var sceneListTableView = segue.destinationViewController as! ScenesListTableViewController
             
             var optionDetails = availableOptions[self.tableView.indexPathForSelectedRow()!.row]
-            sceneListTableView.optionDetails = optionDetails
+            sceneListTableView.optionKey = optionDetails["key"] as? String
+            sceneListTableView.maxScenes = optionDetails["max_scenes"] as! Int
         }
     }
 }

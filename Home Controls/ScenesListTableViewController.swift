@@ -9,8 +9,9 @@
 import UIKit
 
 class ScenesListTableViewController: UITableViewController {
-    var optionDetails: [String: String]?
-    var currentOptionValue: String?
+    var optionKey: String?
+    var maxScenes: Int = 1
+    var optionValues: [String] = []
     var scenes = [NSObject: AnyObject]()
     
     func loadConnectedBridgeValues() {
@@ -34,29 +35,28 @@ class ScenesListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let hueOptionKey: String = optionDetails!["key"]!
-        var sharedDefaults = NSUserDefaults(suiteName: "group.camperoo.test")
-        self.currentOptionValue = sharedDefaults?.objectForKey(hueOptionKey) as? String
+        if self.optionKey != nil {
+            var sharedDefaults = NSUserDefaults(suiteName: "group.camperoo.test")
+            
+            var currentOptionValues = sharedDefaults?.objectForKey(self.optionKey!) as? [String]
+            if currentOptionValues != nil {
+                self.optionValues = currentOptionValues!
+            }
+        }
         
         loadConnectedBridgeValues()
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        let hueOptionKey: String = optionDetails!["key"]!
-        var sharedDefaults = NSUserDefaults(suiteName: "group.camperoo.test")
-        sharedDefaults?.setObject(self.currentOptionValue, forKey: hueOptionKey)
-        sharedDefaults?.synchronize()
     }
     
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
         
-        
+        if self.optionKey != nil {
+            var sharedDefaults = NSUserDefaults(suiteName: "group.camperoo.test")
+            sharedDefaults?.setObject(self.optionValues, forKey: self.optionKey!)
+            sharedDefaults?.synchronize()
+        }
     }
     
-
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -73,7 +73,7 @@ class ScenesListTableViewController: UITableViewController {
         var scene = self.scenes[self.scenes.keys.array[indexPath.row]] as! PHScene
         cell.textLabel?.text = scene.name
         
-        if scene.identifier == self.currentOptionValue {
+        if contains(self.optionValues, scene.identifier) {
             cell.accessoryType = .Checkmark
         } else {
             cell.accessoryType = .None
@@ -83,9 +83,12 @@ class ScenesListTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let sceneId = self.scenes.keys.array[indexPath.row] as? String
-        self.currentOptionValue = sceneId
+        if self.optionValues.count == maxScenes {
+            self.optionValues.removeAtIndex(0)
+        }
         
+        let sceneId = self.scenes.keys.array[indexPath.row] as? String
+        self.optionValues.append(sceneId!)
         self.tableView.reloadData()
     }
 
