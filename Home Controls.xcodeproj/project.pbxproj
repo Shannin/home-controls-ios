@@ -39,6 +39,8 @@
 		F76332B31ADB722D00B1CBDC /* TodayWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F76332A61ADB722D00B1CBDC /* TodayWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F79AD72B1ADD81D700FD426E /* HueAPIWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79AD72A1ADD81D700FD426E /* HueAPIWrapper.swift */; };
 		F7A135461AEB600C002E7DB4 /* HueOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A135451AEB600C002E7DB4 /* HueOptionsTableViewController.swift */; };
+		F7B1DA361AEF3E1A00855808 /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B1DA351AEF3E1A00855808 /* UserDefaultsWrapper.swift */; };
+		F7B1DA371AEF3E1A00855808 /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B1DA351AEF3E1A00855808 /* UserDefaultsWrapper.swift */; };
 		F7B49C0F1ADCD63B00AD07B1 /* ScenesListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B49C0E1ADCD63B00AD07B1 /* ScenesListTableViewController.swift */; };
 		F7EE83E41ADC7CE600EA4EAD /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EE83E31ADC7CE600EA4EAD /* LoadingViewController.swift */; };
 /* End PBXBuildFile section */
@@ -113,6 +115,7 @@
 		F76332AF1ADB722D00B1CBDC /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		F79AD72A1ADD81D700FD426E /* HueAPIWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HueAPIWrapper.swift; sourceTree = "<group>"; };
 		F7A135451AEB600C002E7DB4 /* HueOptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HueOptionsTableViewController.swift; sourceTree = "<group>"; };
+		F7B1DA351AEF3E1A00855808 /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaultsWrapper.swift; path = "Home Controls/UserDefaultsWrapper.swift"; sourceTree = "<group>"; };
 		F7B49C0E1ADCD63B00AD07B1 /* ScenesListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScenesListTableViewController.swift; sourceTree = "<group>"; };
 		F7EE83E31ADC7CE600EA4EAD /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		F7EE83E51ADC81F700EA4EAD /* Home Controls.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Home Controls.entitlements"; sourceTree = "<group>"; };
@@ -188,6 +191,7 @@
 		F76332741ADB721600B1CBDC = {
 			isa = PBXGroup;
 			children = (
+				F7B1DA341AEF3DDF00855808 /* Wrappers */,
 				F763327F1ADB721600B1CBDC /* Home Controls */,
 				F76332951ADB721600B1CBDC /* Home ControlsTests */,
 				F76332AA1ADB722D00B1CBDC /* TodayWidget */,
@@ -279,6 +283,14 @@
 				F749BAFE1ADC2E7100DA6028 /* TodayWidget-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F7B1DA341AEF3DDF00855808 /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				F7B1DA351AEF3E1A00855808 /* UserDefaultsWrapper.swift */,
+			);
+			name = Wrappers;
 			sourceTree = "<group>";
 		};
 		F7B49C0B1ADCD47400AD07B1 /* Hue Setup */ = {
@@ -446,6 +458,7 @@
 				F749BAF41ADC2DA400DA6028 /* DDFileLogger.m in Sources */,
 				F758E6E01AE863660059A528 /* Reachability.m in Sources */,
 				F749BAFA1ADC2DA400DA6028 /* ContextFilterLogFormatter.m in Sources */,
+				F7B1DA361AEF3E1A00855808 /* UserDefaultsWrapper.swift in Sources */,
 				F7A135461AEB600C002E7DB4 /* HueOptionsTableViewController.swift in Sources */,
 				F749BB031ADC3CD800DA6028 /* BridgePushLinkViewController.swift in Sources */,
 				F7EE83E41ADC7CE600EA4EAD /* LoadingViewController.swift in Sources */,
@@ -468,6 +481,7 @@
 				F749BAF71ADC2DA400DA6028 /* DDLog.m in Sources */,
 				F749BAFD1ADC2DA400DA6028 /* DispatchQueueLogFormatter.m in Sources */,
 				F749BAFB1ADC2DA400DA6028 /* ContextFilterLogFormatter.m in Sources */,
+				F7B1DA371AEF3E1A00855808 /* UserDefaultsWrapper.swift in Sources */,
 				F758E6E11AE863660059A528 /* Reachability.m in Sources */,
 				F749BAF11ADC2DA400DA6028 /* DDAbstractDatabaseLogger.m in Sources */,
 				F749BAF51ADC2DA400DA6028 /* DDFileLogger.m in Sources */,

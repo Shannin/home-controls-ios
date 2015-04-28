@@ -19,8 +19,7 @@ class HueAPIWrapper {
     var basePath: String?  // http://\(ip)/api/\(developerName)
     
     func updateVariables() {
-        var defaults = NSUserDefaults(suiteName: "group.camperoo.test")
-        var ip = defaults?.objectForKey("hueIpAddress") as? String
+        var ip = UserDefaultsWrapper.sharedInstance.hueIpAddress
         var username: String? = "homecontrols"
         
         if ip != nil {

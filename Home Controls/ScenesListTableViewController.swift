@@ -36,12 +36,7 @@ class ScenesListTableViewController: UITableViewController {
         super.viewDidLoad()
         
         if self.optionKey != nil {
-            var sharedDefaults = NSUserDefaults(suiteName: "group.camperoo.test")
-            
-            var currentOptionValues = sharedDefaults?.objectForKey(self.optionKey!) as? [String]
-            if currentOptionValues != nil {
-                self.optionValues = currentOptionValues!
-            }
+            self.optionValues = UserDefaultsWrapper.sharedInstance.getScenesForKey(self.optionKey!)
         }
         
         loadConnectedBridgeValues()
@@ -51,9 +46,7 @@ class ScenesListTableViewController: UITableViewController {
         super.viewDidDisappear(animated)
         
         if self.optionKey != nil {
-            var sharedDefaults = NSUserDefaults(suiteName: "group.camperoo.test")
-            sharedDefaults?.setObject(self.optionValues, forKey: self.optionKey!)
-            sharedDefaults?.synchronize()
+            UserDefaultsWrapper.sharedInstance.setScenesForKey(self.optionKey!, scenes: optionValues)
         }
     }
     

@@ -14,9 +14,8 @@ class DoorSettingsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        self.openDoorUrlInput?.text = getUserDefaultValueForKey("DoorOpenURL") as? String
+        self.openDoorUrlInput?.text = UserDefaultsWrapper.sharedInstance.openDoorURL
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -33,22 +32,9 @@ class DoorSettingsViewController: UIViewController {
     
     @IBAction func updateButtonAction() {
         var openDoorURL = self.openDoorUrlInput?.text
-        setUserDefaultValue(openDoorURL!, key: "DoorOpenURL");
+        UserDefaultsWrapper.sharedInstance.openDoorURL = openDoorURL
         
         self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    // MARK:- UserDefaults
-    
-    func setUserDefaultValue(value: AnyObject, key: String) {
-        var sharedDefaults = NSUserDefaults(suiteName: "group.camperoo.test")
-        sharedDefaults?.setObject(value, forKey: key)
-        sharedDefaults?.synchronize()
-    }
-    
-    func getUserDefaultValueForKey(key: String) -> AnyObject? {
-        var sharedDefaults = NSUserDefaults(suiteName: "group.camperoo.test")
-        return sharedDefaults?.objectForKey(key)
     }
 
 }

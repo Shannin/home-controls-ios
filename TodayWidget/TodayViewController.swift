@@ -53,8 +53,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     // MARK:- Door Controls
     
     func openDoor() {
-        let urlPath = getUserDefaultWithKey("DoorOpenURL") as? String
-        
+        var urlPath = UserDefaultsWrapper.sharedInstance.openDoorURL
         if urlPath != nil {
             var url: NSURL = NSURL(string: urlPath!)!
             var request1: NSURLRequest = NSURLRequest(URL: url)
@@ -113,11 +112,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 
     
     func turnOnLightsNowHome() {
-        var scenesArray = getUserDefaultWithKey("ImHomeLightScene") as? [String]
-        if scenesArray != nil && scenesArray!.count >= 1 {
-            let sceneId: String = scenesArray![0]
-            
-            attemptLightsOnWithScene(sceneId)
+        var imHomeScene = UserDefaultsWrapper.sharedInstance.imHomeLightScene
+        if imHomeScene != nil {
+            attemptLightsOnWithScene(imHomeScene!)
         }
     }
     
@@ -134,14 +131,15 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             return
         }
         
+        var allScenes = UserDefaultsWrapper.sharedInstance.getBasicScenes()
+        
         var idx = id!.tag
-        
-        var allScenes = getArrayOfScenes()
-        var scene = allScenes[idx]
-        
-        HueAPIWrapper.sharedInstance.setAllLightsToScene(scene, completion: { (on, error) -> Void in
-            
-        })
+        if idx < allScenes.count {
+            var scene = allScenes[idx]
+            HueAPIWrapper.sharedInstance.setAllLightsToScene(scene, completion: { (on, error) -> Void in
+                
+            })
+        }
     }
     
     
@@ -164,11 +162,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             v.removeFromSuperview()
         }
         
-        
-        var scenesArray = getArrayOfScenes()
-        
-        println(scenesArray)
-        
+        var scenesArray = UserDefaultsWrapper.sharedInstance.getBasicScenes()
         for (idx, scene) in enumerate(scenesArray) {
             var btn: UIButton = UIButton.buttonWithType(.Custom) as! UIButton
             btn.setTitle(scene, forState: .Normal)
@@ -187,24 +181,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             
             self.hueControlsContainer!.addSubview(btn)
         }
-        
     }
     
-    
-    // MARK:- Support Methods
-    
-    func getArrayOfScenes() -> [String] {
-        var scenesArray = getUserDefaultWithKey("HueControlsScenes") as? [String]
-        
-        if scenesArray == nil {
-            return []
-        } else {
-            return scenesArray!
-        }
-    }
-    
-    func getUserDefaultWithKey(key: String) -> AnyObject? {
-        var defaults = NSUserDefaults(suiteName: "group.camperoo.test")
-        return defaults?.objectForKey(key)
-    }
 }
