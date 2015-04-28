@@ -35,6 +35,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         
         self.imHomeContainer?.hidden = true
         self.hueControlsContainer?.hidden = false
+        
+        self.layoutCurrentLightOptions()
     }
     
     func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)!) {
@@ -102,13 +104,20 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         }
     }
     
+    func attemptLightsOnWithScene(sceneId: String) {
+        let reachability = Reachability.reachabilityForInternetConnection()
+        reachability.startNotifier()
+        attemptLightsOnWithScene(sceneId, reachability: reachability, attempt: 0)
+    }
+    
+
+    
     func turnOnLightsNowHome() {
         var scenesArray = getUserDefaultWithKey("ImHomeLightScene") as? [String]
         if scenesArray != nil && scenesArray!.count >= 1 {
             let sceneId: String = scenesArray![0]
-            var reachability = Reachability.reachabilityForInternetConnection()
-            reachability.startNotifier()
-            attemptLightsOnWithScene(sceneId, reachability: reachability, attempt: 0)
+            
+            attemptLightsOnWithScene(sceneId)
         }
     }
     
@@ -118,6 +127,21 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     @IBAction func imHomeButtonAction() {
         //openDoor()
         turnOnLightsNowHome()
+    }
+    
+    func turnLightsOnWithSceneIndex(id: UIButton?) {
+        if id == nil {
+            return
+        }
+        
+        var idx = id!.tag
+        
+        var allScenes = getArrayOfScenes()
+        var scene = allScenes[idx]
+        
+        HueAPIWrapper.sharedInstance.setAllLightsToScene(scene, completion: { (on, error) -> Void in
+            
+        })
     }
     
     
@@ -131,8 +155,53 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         return margins
     }
     
+    func layoutCurrentLightOptions() {
+        if self.hueControlsContainer == nil {
+            return
+        }
+        
+        for v in self.hueControlsContainer!.subviews as! [UIView] {
+            v.removeFromSuperview()
+        }
+        
+        
+        var scenesArray = getArrayOfScenes()
+        
+        println(scenesArray)
+        
+        for (idx, scene) in enumerate(scenesArray) {
+            var btn: UIButton = UIButton.buttonWithType(.Custom) as! UIButton
+            btn.setTitle(scene, forState: .Normal)
+            btn.backgroundColor = UIColor.redColor()
+            
+            var f: CGRect = CGRect()
+            f.size.height = self.hueControlsContainer!.frame.size.height
+            f.size.width = self.hueControlsContainer!.frame.size.width / CGFloat(scenesArray.count)
+            f.origin.x = CGFloat(idx) * f.size.width
+            f.origin.y = 0
+            btn.frame = f
+            
+            
+            btn.tag = idx
+            btn.addTarget(self, action: "turnLightsOnWithSceneIndex:", forControlEvents: .TouchUpInside)
+            
+            self.hueControlsContainer!.addSubview(btn)
+        }
+        
+    }
+    
     
     // MARK:- Support Methods
+    
+    func getArrayOfScenes() -> [String] {
+        var scenesArray = getUserDefaultWithKey("HueControlsScenes") as? [String]
+        
+        if scenesArray == nil {
+            return []
+        } else {
+            return scenesArray!
+        }
+    }
     
     func getUserDefaultWithKey(key: String) -> AnyObject? {
         var defaults = NSUserDefaults(suiteName: "group.camperoo.test")
