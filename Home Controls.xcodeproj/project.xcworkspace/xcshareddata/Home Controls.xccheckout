@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E0BDBD2C-A253-4158-A0E1-1194F588E597</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Home Controls</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>125F5066486E91DCF4B3C2EF25A2728B83C56E74</key>
+		<string>github.com:Shannin/HomeControls.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Home Controls.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>125F5066486E91DCF4B3C2EF25A2728B83C56E74</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:Shannin/HomeControls.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>125F5066486E91DCF4B3C2EF25A2728B83C56E74</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>125F5066486E91DCF4B3C2EF25A2728B83C56E74</string>
+			<key>IDESourceControlWCCName</key>
+			<string>HomeControls</string>
+		</dict>
+	</array>
+</dict>
+</plist>

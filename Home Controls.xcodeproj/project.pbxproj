@@ -29,7 +29,7 @@
 		F758E6E01AE863660059A528 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F758E6DF1AE863660059A528 /* Reachability.m */; };
 		F758E6E11AE863660059A528 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F758E6DF1AE863660059A528 /* Reachability.m */; };
 		F76332831ADB721600B1CBDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76332821ADB721600B1CBDC /* AppDelegate.swift */; };
-		F76332851ADB721600B1CBDC /* DoorSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76332841ADB721600B1CBDC /* DoorSettingsViewController.swift */; };
+		F76332851ADB721600B1CBDC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76332841ADB721600B1CBDC /* SettingsViewController.swift */; };
 		F76332881ADB721600B1CBDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F76332861ADB721600B1CBDC /* Main.storyboard */; };
 		F763328A1ADB721600B1CBDC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F76332891ADB721600B1CBDC /* Images.xcassets */; };
 		F763328D1ADB721600B1CBDC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F763328B1ADB721600B1CBDC /* LaunchScreen.xib */; };
@@ -103,7 +103,7 @@
 		F763327D1ADB721600B1CBDC /* Home Controls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Home Controls.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F76332811ADB721600B1CBDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F76332821ADB721600B1CBDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F76332841ADB721600B1CBDC /* DoorSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorSettingsViewController.swift; sourceTree = "<group>"; };
+		F76332841ADB721600B1CBDC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		F76332871ADB721600B1CBDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F76332891ADB721600B1CBDC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F763328C1ADB721600B1CBDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -218,7 +218,7 @@
 			children = (
 				F7B49C0B1ADCD47400AD07B1 /* Hue Setup */,
 				F76332821ADB721600B1CBDC /* AppDelegate.swift */,
-				F76332841ADB721600B1CBDC /* DoorSettingsViewController.swift */,
+				F76332841ADB721600B1CBDC /* SettingsViewController.swift */,
 				F7A135451AEB600C002E7DB4 /* HueOptionsTableViewController.swift */,
 				F7B49C0E1ADCD63B00AD07B1 /* ScenesListTableViewController.swift */,
 				F76332861ADB721600B1CBDC /* Main.storyboard */,
@@ -458,7 +458,7 @@
 			files = (
 				F749BAF61ADC2DA400DA6028 /* DDLog.m in Sources */,
 				F749BAF21ADC2DA400DA6028 /* DDASLLogger.m in Sources */,
-				F76332851ADB721600B1CBDC /* DoorSettingsViewController.swift in Sources */,
+				F76332851ADB721600B1CBDC /* SettingsViewController.swift in Sources */,
 				F76332831ADB721600B1CBDC /* AppDelegate.swift in Sources */,
 				F749BAFC1ADC2DA400DA6028 /* DispatchQueueLogFormatter.m in Sources */,
 				F749BAF01ADC2DA400DA6028 /* DDAbstractDatabaseLogger.m in Sources */,

@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class DoorSettingsViewController: UIViewController, CLLocationManagerDelegate {
+class SettingsViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     
     @IBOutlet var openDoorUrlInput: UITextField?
