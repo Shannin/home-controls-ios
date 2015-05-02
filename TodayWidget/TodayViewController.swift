@@ -9,6 +9,11 @@
 import UIKit
 import NotificationCenter
 
+enum TodayWidgetAvailableViews {
+    case ImHome
+    case HueControls
+}
+
 class TodayViewController: UIViewController, NCWidgetProviding {
     let WIFI_ATTEMPT_DELAY = 2.0;
     let WIFI_ATTEMPT_TRIES = 10;
@@ -31,11 +36,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.preferredContentSize = CGSizeMake(320, 100)
-        
-        self.imHomeContainer?.hidden = true
-        self.hueControlsContainer?.hidden = false
-        
+        setCurrentViewToView(.ImHome)
         self.layoutCurrentLightOptions()
     }
     
@@ -47,6 +48,23 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         // If there's an update, use NCUpdateResult.NewData
 
         completionHandler(NCUpdateResult.NewData)
+    }
+    
+    func setCurrentViewToView(view: TodayWidgetAvailableViews) {
+        self.imHomeContainer?.hidden = true
+        self.imHomeContainer?.userInteractionEnabled = false
+        self.hueControlsContainer?.hidden = true
+        self.hueControlsContainer?.userInteractionEnabled = false
+        
+        if view == .ImHome {
+            self.imHomeContainer?.hidden = false
+            self.imHomeContainer?.userInteractionEnabled = true
+        } else if view == .HueControls {
+            self.hueControlsContainer?.hidden = false
+            self.hueControlsContainer?.userInteractionEnabled = true
+        }
+        
+        self.preferredContentSize = CGSizeMake(320, 100)
     }
     
     
@@ -90,7 +108,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         Hue works best when connected to wifi, so if the phone isn't connected to wifi:
             check every y seconds until it is connected up to x attempts
     */
-    
     func attemptLightsOnWithScene(sceneId: String, reachability: Reachability, attempt: Int) {
         var status = reachability.currentReachabilityStatus()
         if status.value == ReachableViaWiFi.value {
@@ -122,8 +139,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     // MARK:- Input Actions
     
     @IBAction func imHomeButtonAction() {
-        //openDoor()
+        openDoor()
         turnOnLightsNowHome()
+        setCurrentViewToView(.HueControls)
     }
     
     func turnLightsOnWithSceneIndex(id: UIButton?) {

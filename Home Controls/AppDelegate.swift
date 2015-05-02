@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import NotificationCenter
+import CoreLocation
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, BridgeSelectionViewControllerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate, BridgeSelectionViewControllerDelegate {
 
     var window: UIWindow?
     
     let phHueSdk: PHHueSDK = PHHueSDK()
+    let locationManager = CLLocationManager()
     var noConnectionAlert: UIAlertController?
     var noBridgeFoundAlert: UIAlertController?
     var authenticationFailedAlert: UIAlertController?
@@ -23,24 +26,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, BridgeSelectionViewContro
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         phHueSdk.startUpSDK()
         phHueSdk.enableLogging(true)
+        
         let notificationManager = PHNotificationManager.defaultManager()
-        
-        // The SDK will send the following notifications in response to events:
-        //
-        // - LOCAL_CONNECTION_NOTIFICATION
-        // This notification will notify that the bridge heartbeat occurred and the bridge resources cache data has been updated
-        //
-        // - NO_LOCAL_CONNECTION_NOTIFICATION
-        // This notification will notify that there is no connection with the bridge
-        //
-        // - NO_LOCAL_AUTHENTICATION_NOTIFICATION
-        // This notification will notify that there is no authentication against the bridge
-        notificationManager.registerObject(self, withSelector: "localConnection" , forNotification: LOCAL_CONNECTION_NOTIFICATION)
-        notificationManager.registerObject(self, withSelector: "noLocalConnection", forNotification: NO_LOCAL_CONNECTION_NOTIFICATION)
-        notificationManager.registerObject(self, withSelector: "notAuthenticated", forNotification: NO_LOCAL_AUTHENTICATION_NOTIFICATION)
-        
-        // The local heartbeat is a regular timer event in the SDK. Once enabled the SDK regular collects the current state of resources managed by the bridge into the Bridge Resources Cache
+        notificationManager.registerObject(self, withSelector: "localConnection" , forNotification: LOCAL_CONNECTION_NOTIFICATION) // Bridge heartbeat occurred and the bridge resources cache data has been updated
+        notificationManager.registerObject(self, withSelector: "noLocalConnection", forNotification: NO_LOCAL_CONNECTION_NOTIFICATION) // No connection with the bridge
+        notificationManager.registerObject(self, withSelector: "notAuthenticated", forNotification: NO_LOCAL_AUTHENTICATION_NOTIFICATION) // No authentication against the bridge
         enableLocalHeartbeat()
+        
+        // Setup location manager
+        locationManager.delegate = self
+        locationManager.requestAlwaysAuthorization()
         
         return true
     }
@@ -59,6 +54,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, BridgeSelectionViewContro
         noBridgeFoundAlert = nil
         authenticationFailedAlert?.dismissViewControllerAnimated(false, completion: nil)
         authenticationFailedAlert = nil
+    }
+    
+    // MARK:- CLLocationManagerDelegate
+    
+    func locationManager(manager: CLLocationManager!, didEnterRegion region: CLRegion!) {
+        println("entered")
+        NCWidgetController.widgetController().setHasContent(true, forWidgetWithBundleIdentifier: NSBundle.mainBundle().bundleIdentifier! + ".TodayWidget")
+    }
+    
+    func locationManager(manager: CLLocationManager!, didExitRegion region: CLRegion!) {
+        println("exitied")
+        NCWidgetController.widgetController().setHasContent(false, forWidgetWithBundleIdentifier: NSBundle.mainBundle().bundleIdentifier! + ".TodayWidget")
     }
 
     // MARK: - HueSDK

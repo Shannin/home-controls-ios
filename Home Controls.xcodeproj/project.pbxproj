@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F7192B461AF30794007277F4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7192B451AF30794007277F4 /* CoreLocation.framework */; };
 		F749BADB1ADC2D8400DA6028 /* HueSDK_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F749BADA1ADC2D8400DA6028 /* HueSDK_iOS.framework */; };
 		F749BADC1ADC2D8400DA6028 /* HueSDK_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F749BADA1ADC2D8400DA6028 /* HueSDK_iOS.framework */; };
 		F749BAF01ADC2DA400DA6028 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F749BAE21ADC2DA400DA6028 /* DDAbstractDatabaseLogger.m */; };
@@ -77,6 +78,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F7192B451AF30794007277F4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F749BADA1ADC2D8400DA6028 /* HueSDK_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HueSDK_iOS.framework; sourceTree = "<group>"; };
 		F749BAE11ADC2DA400DA6028 /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
 		F749BAE21ADC2DA400DA6028 /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7192B461AF30794007277F4 /* CoreLocation.framework in Frameworks */,
 				F749BADB1ADC2D8400DA6028 /* HueSDK_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +259,7 @@
 		F76332A71ADB722D00B1CBDC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F7192B451AF30794007277F4 /* CoreLocation.framework */,
 				F758E6E21AE86B9A0059A528 /* Reachability */,
 				F749BAE01ADC2DA400DA6028 /* Lumberjack */,
 				F749BADA1ADC2D8400DA6028 /* HueSDK_iOS.framework */,
@@ -375,6 +379,12 @@
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
+							};
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
 							};
 						};
 					};

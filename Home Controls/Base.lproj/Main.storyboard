@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Open Door URL:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Est-Ea-6LD">
-                                <rect key="frame" x="16" y="146" width="576" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open Door URL:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Est-Ea-6LD">
+                                <rect key="frame" x="16" y="64" width="576" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="9HF-O0-Wgc"/>
                                 </constraints>
@@ -26,11 +26,29 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oa0-Op-igD">
-                                <rect key="frame" x="16" y="191" width="568" height="46"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oa0-Op-igD">
+                                <rect key="frame" x="16" y="109" width="568" height="46"/>
                                 <color key="backgroundColor" red="0.96746949815837935" green="0.96746949815837935" blue="0.96746949815837935" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="Gcx-W6-nt2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKP-ds-xYd">
+                                <rect key="frame" x="16" y="175" width="576" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="mCF-mn-eAu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I3t-3U-aNZ">
+                                <rect key="frame" x="16" y="220" width="568" height="46"/>
+                                <color key="backgroundColor" red="0.96746949820000006" green="0.96746949820000006" blue="0.96746949820000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="reh-q8-jjq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -40,9 +58,15 @@
                         <constraints>
                             <constraint firstItem="Est-Ea-6LD" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="DYv-fN-ErN"/>
                             <constraint firstItem="Oa0-Op-igD" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Hr6-dr-4D0"/>
+                            <constraint firstItem="I3t-3U-aNZ" firstAttribute="trailing" secondItem="Oa0-Op-igD" secondAttribute="trailing" id="JGD-la-9fW"/>
+                            <constraint firstItem="gKP-ds-xYd" firstAttribute="trailing" secondItem="Est-Ea-6LD" secondAttribute="trailing" id="SFd-P4-0GI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Est-Ea-6LD" secondAttribute="trailing" constant="-8" id="U7D-Zs-TPd"/>
+                            <constraint firstItem="gKP-ds-xYd" firstAttribute="top" secondItem="Oa0-Op-igD" secondAttribute="bottom" constant="20" id="e8y-wr-uVQ"/>
                             <constraint firstItem="Oa0-Op-igD" firstAttribute="top" secondItem="Est-Ea-6LD" secondAttribute="bottom" constant="8" symbolic="YES" id="ggW-sq-bcg"/>
+                            <constraint firstItem="gKP-ds-xYd" firstAttribute="leading" secondItem="I3t-3U-aNZ" secondAttribute="leading" id="lVj-TS-Hev"/>
+                            <constraint firstItem="I3t-3U-aNZ" firstAttribute="top" secondItem="gKP-ds-xYd" secondAttribute="bottom" constant="8" symbolic="YES" id="n4c-ag-9qf"/>
                             <constraint firstItem="Est-Ea-6LD" firstAttribute="leading" secondItem="Oa0-Op-igD" secondAttribute="leading" id="skJ-ZI-nK6"/>
+                            <constraint firstItem="gKP-ds-xYd" firstAttribute="leading" secondItem="Oa0-Op-igD" secondAttribute="leading" id="x3F-ER-xnV"/>
                             <constraint firstItem="Oa0-Op-igD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ylk-iZ-eT1"/>
                         </constraints>
                     </view>
@@ -61,7 +85,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="openDoorUrlInput" destination="Oa0-Op-igD" id="gdE-Yg-SEc"/>
+                        <outlet property="addressInput" destination="I3t-3U-aNZ" id="JYl-YH-2qv"/>
+                        <outlet property="openDoorUrlInput" destination="Oa0-Op-igD" id="sBI-cI-dv2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -85,7 +110,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CjD-ja-ngt">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -120,7 +145,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Kt3-Sf-hkv">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -140,7 +165,7 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nub-bY-0CH">
                                 <rect key="frame" x="16" y="7" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Door">
+                                <state key="normal" title="Settings">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>

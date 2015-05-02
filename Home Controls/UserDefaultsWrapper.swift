@@ -24,6 +24,19 @@ class UserDefaultsWrapper {
         }
     }
     
+    var homeAddress: String? {
+        set {
+            if newValue != nil && !newValue!.isEmpty {
+                setUserDefault("HomeAddress", value: newValue!)
+            } else {
+                removeUserDefaultForKey("HomeAddress")
+            }
+        }
+        get {
+            return getUserDefaultForKey("HomeAddress") as? String
+        }
+    }
+    
     var hueIpAddress: String? {
         set {
             if newValue != nil && !newValue!.isEmpty {
