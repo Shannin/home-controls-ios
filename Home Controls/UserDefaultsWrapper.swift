@@ -8,9 +8,28 @@
 
 import Foundation
 
+enum TodayWidgetAvailableViews: Int {
+    case ImHome
+    case HueControls
+}
+
 private let _sharedUserDefaultsWrapper = UserDefaultsWrapper()
 
 class UserDefaultsWrapper {
+    var todayWidgetCurrentView: TodayWidgetAvailableViews {
+        set {
+            setUserDefault("TodayWidgetCurrentView", value: newValue.hashValue)
+        }
+        get {
+            var hashValue: Int? = getUserDefaultForKey("TodayWidgetCurrentView") as? Int
+            if hashValue != nil {
+                return TodayWidgetAvailableViews(rawValue: hashValue!)!
+            }
+            
+            return .ImHome
+        }
+    }
+    
     var openDoorURL: String? {
         set {
             if newValue != nil && !newValue!.isEmpty {
@@ -69,7 +88,6 @@ class UserDefaultsWrapper {
         }
     }
     
-    
     func setScenesForKey(key: String, scenes: [String]) {
         setUserDefault(key, value: scenes)
     }
@@ -87,7 +105,9 @@ class UserDefaultsWrapper {
     func getBasicScenes() -> [String] {
         return getScenesForKey("HueControlsScenes")
     }
-
+    
+    
+    // MARK:- Helper Methods
     
     func getUserDefaultForKey(key: String) -> AnyObject? {
         var sharedDefaults = NSUserDefaults(suiteName: "group.camperoo.test")

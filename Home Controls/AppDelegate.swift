@@ -59,12 +59,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     // MARK:- CLLocationManagerDelegate
     
     func locationManager(manager: CLLocationManager!, didEnterRegion region: CLRegion!) {
-        println("entered")
+        UserDefaultsWrapper.sharedInstance.todayWidgetCurrentView = .ImHome
         NCWidgetController.widgetController().setHasContent(true, forWidgetWithBundleIdentifier: NSBundle.mainBundle().bundleIdentifier! + ".TodayWidget")
     }
     
     func locationManager(manager: CLLocationManager!, didExitRegion region: CLRegion!) {
-        println("exitied")
         NCWidgetController.widgetController().setHasContent(false, forWidgetWithBundleIdentifier: NSBundle.mainBundle().bundleIdentifier! + ".TodayWidget")
     }
 

@@ -115,7 +115,7 @@
 		F76332AC1ADB722D00B1CBDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F76332AD1ADB722D00B1CBDC /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		F76332AF1ADB722D00B1CBDC /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
-		F79AD72A1ADD81D700FD426E /* HueAPIWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HueAPIWrapper.swift; sourceTree = "<group>"; };
+		F79AD72A1ADD81D700FD426E /* HueAPIWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HueAPIWrapper.swift; path = TodayWidget/HueAPIWrapper.swift; sourceTree = "<group>"; };
 		F7A135451AEB600C002E7DB4 /* HueOptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HueOptionsTableViewController.swift; sourceTree = "<group>"; };
 		F7B1DA351AEF3E1A00855808 /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaultsWrapper.swift; path = "Home Controls/UserDefaultsWrapper.swift"; sourceTree = "<group>"; };
 		F7B49C0E1ADCD63B00AD07B1 /* ScenesListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScenesListTableViewController.swift; sourceTree = "<group>"; };
@@ -271,7 +271,6 @@
 		F76332AA1ADB722D00B1CBDC /* TodayWidget */ = {
 			isa = PBXGroup;
 			children = (
-				F79AD72A1ADD81D700FD426E /* HueAPIWrapper.swift */,
 				F76332AD1ADB722D00B1CBDC /* TodayViewController.swift */,
 				F76332AF1ADB722D00B1CBDC /* MainInterface.storyboard */,
 				F76332AB1ADB722D00B1CBDC /* Supporting Files */,
@@ -293,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				F7B1DA351AEF3E1A00855808 /* UserDefaultsWrapper.swift */,
+				F79AD72A1ADD81D700FD426E /* HueAPIWrapper.swift */,
 			);
 			name = Wrappers;
 			sourceTree = "<group>";

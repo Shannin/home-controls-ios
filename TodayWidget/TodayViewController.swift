@@ -9,11 +9,6 @@
 import UIKit
 import NotificationCenter
 
-enum TodayWidgetAvailableViews {
-    case ImHome
-    case HueControls
-}
-
 class TodayViewController: UIViewController, NCWidgetProviding {
     let WIFI_ATTEMPT_DELAY = 2.0;
     let WIFI_ATTEMPT_TRIES = 10;
@@ -36,8 +31,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setCurrentViewToView(.ImHome)
-        self.layoutCurrentLightOptions()
+        var currentView: TodayWidgetAvailableViews = UserDefaultsWrapper.sharedInstance.todayWidgetCurrentView
+        setCurrentViewToView(currentView)
     }
     
     func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)!) {
@@ -62,9 +57,12 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         } else if view == .HueControls {
             self.hueControlsContainer?.hidden = false
             self.hueControlsContainer?.userInteractionEnabled = true
+            self.layoutCurrentLightOptions()
         }
         
         self.preferredContentSize = CGSizeMake(320, 100)
+        
+        UserDefaultsWrapper.sharedInstance.todayWidgetCurrentView = view
     }
     
     
@@ -140,8 +138,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     @IBAction func imHomeButtonAction() {
         openDoor()
+        
         turnOnLightsNowHome()
-        setCurrentViewToView(.HueControls)
+//        setCurrentViewToView(.HueControls)
     }
     
     func turnLightsOnWithSceneIndex(id: UIButton?) {
@@ -192,7 +191,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             f.origin.x = CGFloat(idx) * f.size.width
             f.origin.y = 0
             btn.frame = f
-            
             
             btn.tag = idx
             btn.addTarget(self, action: "turnLightsOnWithSceneIndex:", forControlEvents: .TouchUpInside)

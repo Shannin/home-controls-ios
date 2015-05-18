@@ -14,6 +14,8 @@ class HueOptionsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        println(UserDefaultsWrapper.sharedInstance.hueIpAddress)
     }
     
 
