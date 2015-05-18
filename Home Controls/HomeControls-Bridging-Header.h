@@ -9,6 +9,4 @@
 #ifndef Home_Controls_HomeControls_Bridging_Header_j_h
 #define Home_Controls_HomeControls_Bridging_Header_j_h
 
-#import <HueSDK_iOS/HueSDK.h>
-
 #endif

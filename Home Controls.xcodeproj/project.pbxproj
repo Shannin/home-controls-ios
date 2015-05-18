@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F7192B461AF30794007277F4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7192B451AF30794007277F4 /* CoreLocation.framework */; };
-		F749BADB1ADC2D8400DA6028 /* HueSDK_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F749BADA1ADC2D8400DA6028 /* HueSDK_iOS.framework */; };
-		F749BADC1ADC2D8400DA6028 /* HueSDK_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F749BADA1ADC2D8400DA6028 /* HueSDK_iOS.framework */; };
 		F749BAF01ADC2DA400DA6028 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F749BAE21ADC2DA400DA6028 /* DDAbstractDatabaseLogger.m */; };
 		F749BAF11ADC2DA400DA6028 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F749BAE21ADC2DA400DA6028 /* DDAbstractDatabaseLogger.m */; };
 		F749BAF21ADC2DA400DA6028 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F749BAE41ADC2DA400DA6028 /* DDASLLogger.m */; };
@@ -24,8 +22,6 @@
 		F749BAFB1ADC2DA400DA6028 /* ContextFilterLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F749BAED1ADC2DA400DA6028 /* ContextFilterLogFormatter.m */; };
 		F749BAFC1ADC2DA400DA6028 /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F749BAEF1ADC2DA400DA6028 /* DispatchQueueLogFormatter.m */; };
 		F749BAFD1ADC2DA400DA6028 /* DispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F749BAEF1ADC2DA400DA6028 /* DispatchQueueLogFormatter.m */; };
-		F749BB031ADC3CD800DA6028 /* BridgePushLinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F749BB011ADC3CD800DA6028 /* BridgePushLinkViewController.swift */; };
-		F749BB041ADC3CD800DA6028 /* BridgeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F749BB021ADC3CD800DA6028 /* BridgeSelectionViewController.swift */; };
 		F758E6E01AE863660059A528 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F758E6DF1AE863660059A528 /* Reachability.m */; };
 		F758E6E11AE863660059A528 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F758E6DF1AE863660059A528 /* Reachability.m */; };
 		F76332831ADB721600B1CBDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76332821ADB721600B1CBDC /* AppDelegate.swift */; };
@@ -43,7 +39,6 @@
 		F7B1DA361AEF3E1A00855808 /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B1DA351AEF3E1A00855808 /* UserDefaultsWrapper.swift */; };
 		F7B1DA371AEF3E1A00855808 /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B1DA351AEF3E1A00855808 /* UserDefaultsWrapper.swift */; };
 		F7B49C0F1ADCD63B00AD07B1 /* ScenesListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B49C0E1ADCD63B00AD07B1 /* ScenesListTableViewController.swift */; };
-		F7EE83E41ADC7CE600EA4EAD /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EE83E31ADC7CE600EA4EAD /* LoadingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +74,6 @@
 
 /* Begin PBXFileReference section */
 		F7192B451AF30794007277F4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		F749BADA1ADC2D8400DA6028 /* HueSDK_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HueSDK_iOS.framework; sourceTree = "<group>"; };
 		F749BAE11ADC2DA400DA6028 /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
 		F749BAE21ADC2DA400DA6028 /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
 		F749BAE31ADC2DA400DA6028 /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
@@ -96,8 +90,6 @@
 		F749BAEF1ADC2DA400DA6028 /* DispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DispatchQueueLogFormatter.m; sourceTree = "<group>"; };
 		F749BAFE1ADC2E7100DA6028 /* TodayWidget-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TodayWidget-Bridging-Header.h"; sourceTree = "<group>"; };
 		F749BB001ADC36EE00DA6028 /* HomeControls-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HomeControls-Bridging-Header.h"; sourceTree = "<group>"; };
-		F749BB011ADC3CD800DA6028 /* BridgePushLinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgePushLinkViewController.swift; sourceTree = "<group>"; };
-		F749BB021ADC3CD800DA6028 /* BridgeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BridgeSelectionViewController.swift; sourceTree = "<group>"; };
 		F758E6DE1AE863660059A528 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = "Home Controls/Reachability.h"; sourceTree = "<group>"; };
 		F758E6DF1AE863660059A528 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = "Home Controls/Reachability.m"; sourceTree = "<group>"; };
 		F763327D1ADB721600B1CBDC /* Home Controls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Home Controls.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,7 +111,6 @@
 		F7A135451AEB600C002E7DB4 /* HueOptionsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HueOptionsTableViewController.swift; sourceTree = "<group>"; };
 		F7B1DA351AEF3E1A00855808 /* UserDefaultsWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserDefaultsWrapper.swift; path = "Home Controls/UserDefaultsWrapper.swift"; sourceTree = "<group>"; };
 		F7B49C0E1ADCD63B00AD07B1 /* ScenesListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScenesListTableViewController.swift; sourceTree = "<group>"; };
-		F7EE83E31ADC7CE600EA4EAD /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		F7EE83E51ADC81F700EA4EAD /* Home Controls.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Home Controls.entitlements"; sourceTree = "<group>"; };
 		F7EE83E61ADC825100EA4EAD /* TodayWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TodayWidget.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,7 +121,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7192B461AF30794007277F4 /* CoreLocation.framework in Frameworks */,
-				F749BADB1ADC2D8400DA6028 /* HueSDK_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +135,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F749BADC1ADC2D8400DA6028 /* HueSDK_iOS.framework in Frameworks */,
 				F76332A91ADB722D00B1CBDC /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,7 +205,6 @@
 		F763327F1ADB721600B1CBDC /* Home Controls */ = {
 			isa = PBXGroup;
 			children = (
-				F7B49C0B1ADCD47400AD07B1 /* Hue Setup */,
 				F76332821ADB721600B1CBDC /* AppDelegate.swift */,
 				F76332841ADB721600B1CBDC /* SettingsViewController.swift */,
 				F7A135451AEB600C002E7DB4 /* HueOptionsTableViewController.swift */,
@@ -262,7 +250,6 @@
 				F7192B451AF30794007277F4 /* CoreLocation.framework */,
 				F758E6E21AE86B9A0059A528 /* Reachability */,
 				F749BAE01ADC2DA400DA6028 /* Lumberjack */,
-				F749BADA1ADC2D8400DA6028 /* HueSDK_iOS.framework */,
 				F76332A81ADB722D00B1CBDC /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
@@ -295,16 +282,6 @@
 				F79AD72A1ADD81D700FD426E /* HueAPIWrapper.swift */,
 			);
 			name = Wrappers;
-			sourceTree = "<group>";
-		};
-		F7B49C0B1ADCD47400AD07B1 /* Hue Setup */ = {
-			isa = PBXGroup;
-			children = (
-				F749BB011ADC3CD800DA6028 /* BridgePushLinkViewController.swift */,
-				F749BB021ADC3CD800DA6028 /* BridgeSelectionViewController.swift */,
-				F7EE83E31ADC7CE600EA4EAD /* LoadingViewController.swift */,
-			);
-			name = "Hue Setup";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -463,15 +440,12 @@
 				F749BAFC1ADC2DA400DA6028 /* DispatchQueueLogFormatter.m in Sources */,
 				F749BAF01ADC2DA400DA6028 /* DDAbstractDatabaseLogger.m in Sources */,
 				F749BAF81ADC2DA400DA6028 /* DDTTYLogger.m in Sources */,
-				F749BB041ADC3CD800DA6028 /* BridgeSelectionViewController.swift in Sources */,
 				F7B49C0F1ADCD63B00AD07B1 /* ScenesListTableViewController.swift in Sources */,
 				F749BAF41ADC2DA400DA6028 /* DDFileLogger.m in Sources */,
 				F758E6E01AE863660059A528 /* Reachability.m in Sources */,
 				F749BAFA1ADC2DA400DA6028 /* ContextFilterLogFormatter.m in Sources */,
 				F7B1DA361AEF3E1A00855808 /* UserDefaultsWrapper.swift in Sources */,
 				F7A135461AEB600C002E7DB4 /* HueOptionsTableViewController.swift in Sources */,
-				F749BB031ADC3CD800DA6028 /* BridgePushLinkViewController.swift in Sources */,
-				F7EE83E41ADC7CE600EA4EAD /* LoadingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

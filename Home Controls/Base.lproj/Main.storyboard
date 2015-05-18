@@ -131,7 +131,7 @@
         <scene sceneID="j16-ov-GYS">
             <objects>
                 <tableViewController id="e3c-MV-g3t" customClass="HueOptionsTableViewController" customModule="Home_Controls" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eJg-ES-qEa" customClass="HueOp">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="eJg-ES-qEa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -194,128 +194,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Obb-Fv-oiT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-664" y="-883"/>
-        </scene>
-        <!--Bridge Selection View Controller-->
-        <scene sceneID="UUE-oT-gum">
-            <objects>
-                <tableViewController storyboardIdentifier="BridgeSelection" id="cG0-uC-Gn0" customClass="BridgeSelectionViewController" customModule="Home_Controls" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="NFy-SN-74N">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="U7y-IJ-C6I" detailTextLabel="ybe-h5-o1y" style="IBUITableViewCellStyleSubtitle" id="8dU-Ec-rDS">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8dU-Ec-rDS" id="Yuy-hs-0QX">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U7y-IJ-C6I">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ybe-h5-o1y">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="cG0-uC-Gn0" id="KUk-qp-V0O"/>
-                            <outlet property="delegate" destination="cG0-uC-Gn0" id="IXy-AP-Qdg"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3Ut-Sq-klG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2082" y="-882"/>
-        </scene>
-        <!--Bridge Push Link View Controller-->
-        <scene sceneID="r5n-bf-2tS">
-            <objects>
-                <viewController storyboardIdentifier="BridgePushLink" id="bqC-1H-qu7" customClass="BridgePushLinkViewController" customModule="Home_Controls" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="eci-FE-q3t"/>
-                        <viewControllerLayoutGuide type="bottom" id="nwJ-4c-dcq"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="RA7-UL-9dm">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qZT-2l-4aK">
-                                <rect key="frame" x="34" y="557" width="531" height="2"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="166" id="VpW-Vr-IgA"/>
-                                    <constraint firstAttribute="width" constant="166" id="hqj-mb-zuD"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="VpW-Vr-IgA"/>
-                                        <exclude reference="hqj-mb-zuD"/>
-                                    </mask>
-                                </variation>
-                            </progressView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="press_smartbridge" translatesAutoresizingMaskIntoConstraints="NO" id="cot-yk-vi0">
-                                <rect key="frame" x="180" y="75" width="240" height="289"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="544" id="AfZ-6N-FD5"/>
-                                    <constraint firstAttribute="height" constant="289" id="KQh-Fh-wEf"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="401" id="RaL-g9-4C9"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="595" id="g3f-zj-QPA"/>
-                                    <constraint firstAttribute="width" constant="240" id="gg7-Wv-TYI"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="366" id="jPm-yS-9je"/>
-                                    <constraint firstAttribute="width" constant="178" id="qa4-GP-etm"/>
-                                    <constraint firstAttribute="height" constant="215" id="yYL-5J-tkE"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="AfZ-6N-FD5"/>
-                                        <exclude reference="RaL-g9-4C9"/>
-                                        <exclude reference="g3f-zj-QPA"/>
-                                        <exclude reference="jPm-yS-9je"/>
-                                        <exclude reference="qa4-GP-etm"/>
-                                        <exclude reference="yYL-5J-tkE"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="80" y="56" width="178" height="215"/>
-                                    <mask key="constraints">
-                                        <include reference="qa4-GP-etm"/>
-                                        <include reference="yYL-5J-tkE"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="7" y="-44" width="544" height="595"/>
-                                    <mask key="constraints">
-                                        <include reference="AfZ-6N-FD5"/>
-                                        <exclude reference="RaL-g9-4C9"/>
-                                        <include reference="g3f-zj-QPA"/>
-                                        <exclude reference="jPm-yS-9je"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="qZT-2l-4aK" secondAttribute="trailing" constant="19" id="98T-lD-g1G"/>
-                            <constraint firstItem="cot-yk-vi0" firstAttribute="centerX" secondItem="RA7-UL-9dm" secondAttribute="centerX" id="LI4-oE-Q3Y"/>
-                            <constraint firstItem="cot-yk-vi0" firstAttribute="top" secondItem="eci-FE-q3t" secondAttribute="bottom" constant="55" id="Pjx-6c-cjC"/>
-                            <constraint firstItem="nwJ-4c-dcq" firstAttribute="top" secondItem="qZT-2l-4aK" secondAttribute="bottom" constant="41" id="hyp-yu-QCU"/>
-                            <constraint firstItem="qZT-2l-4aK" firstAttribute="leading" secondItem="RA7-UL-9dm" secondAttribute="leadingMargin" constant="18" id="wX1-Yy-L89"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="progressView" destination="qZT-2l-4aK" id="dzE-U9-rR7"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a22-FU-jAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2744" y="-883"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fez-dI-7ti">
@@ -380,7 +258,4 @@
             <point key="canvasLocation" x="3411" y="-882"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="press_smartbridge" width="516" height="475"/>
-    </resources>
 </document>

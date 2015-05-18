@@ -13,24 +13,6 @@ class ScenesListTableViewController: UITableViewController {
     var maxScenes: Int = 1
     var optionValues: [String] = []
     var scenes = [NSObject: AnyObject]()
-    
-    func loadConnectedBridgeValues() {
-        let cache = PHBridgeResourcesReader.readBridgeResourcesCache()
-        
-        // Check if we have connected to a bridge before
-        if cache?.bridgeConfiguration?.ipaddress != nil {
-            // Check if we are connected to the bridge right now
-            let appDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-            if appDelegate.phHueSdk.localConnected() {
-                if cache.scenes != nil {
-                    self.scenes = cache!.scenes
-                    self.tableView.reloadData()
-                }
-            } else {
-                
-            }
-        }
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +20,6 @@ class ScenesListTableViewController: UITableViewController {
         if self.optionKey != nil {
             self.optionValues = UserDefaultsWrapper.sharedInstance.getScenesForKey(self.optionKey!)
         }
-        
-        loadConnectedBridgeValues()
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -63,10 +43,9 @@ class ScenesListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
         
-        var scene = self.scenes[self.scenes.keys.array[indexPath.row]] as! PHScene
-        cell.textLabel?.text = scene.name
+        cell.textLabel?.text = "test"
         
-        if contains(self.optionValues, scene.identifier) {
+        if contains(self.optionValues, "test") {
             cell.accessoryType = .Checkmark
         } else {
             cell.accessoryType = .None

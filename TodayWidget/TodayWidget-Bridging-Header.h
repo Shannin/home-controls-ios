@@ -9,8 +9,4 @@
 #ifndef Home_Controls_TodayWidget_Bridging_Header_h
 #define Home_Controls_TodayWidget_Bridging_Header_h
 
-#import <HueSDK_iOS/HueSDK.h>
-
-#import "Reachability.h"
-
 #endif
