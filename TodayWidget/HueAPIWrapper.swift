@@ -19,12 +19,7 @@ class HueAPIWrapper {
     var basePath: String?  // http://\(ip)/api/\(developerName)
     
     func updateVariables() {
-        var ip = UserDefaultsWrapper.sharedInstance.hueIpAddress
-        var username: String? = "homecontrols"
-        
-        if ip != nil {
-            self.basePath = "http://\(ip!)/api/\(username!)"
-        }
+        self.basePath = "http://c75e0899.ngrok.io/lights"
     }
     
     
@@ -38,14 +33,12 @@ class HueAPIWrapper {
             return
         }
         
-        let urlPath = "\(basePath!)/groups/0/action"
-        var body = ["on": true, "scene": sceneId]
+        let urlPath = "\(basePath!)/all/\(sceneId)"
         
         var err: NSError?
         var url: NSURL = NSURL(string: urlPath)!
         var request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
-        request.HTTPMethod = "PUT"
-        request.HTTPBody = NSJSONSerialization.dataWithJSONObject(body, options: nil, error: &err)
+        request.HTTPMethod = "GET"
         
         let queue:NSOperationQueue = NSOperationQueue()
         NSURLConnection.sendAsynchronousRequest(request, queue: queue, completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in

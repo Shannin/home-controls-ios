@@ -10,9 +10,6 @@ import UIKit
 import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
-    let WIFI_ATTEMPT_DELAY = 2.0;
-    let WIFI_ATTEMPT_TRIES = 10;
-    
     @IBOutlet var imHomeContainer: UIView?
     @IBOutlet var imHomeButton: UIButton?
     
@@ -102,34 +99,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         })
     }
     
-    /*
-        Hue works best when connected to wifi, so if the phone isn't connected to wifi:
-            check every y seconds until it is connected up to x attempts
-    */
-    func attemptLightsOnWithScene(sceneId: String, reachability: Reachability, attempt: Int) {
-        var status = reachability.currentReachabilityStatus()
-        if status.value == ReachableViaWiFi.value {
-            setLightScene(sceneId)
-            reachability.stopNotifier()
-        } else if (attempt < WIFI_ATTEMPT_TRIES) {
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(WIFI_ATTEMPT_DELAY * Double(NSEC_PER_SEC))), dispatch_get_main_queue()) { () -> Void in
-                self.attemptLightsOnWithScene(sceneId, reachability: reachability, attempt: attempt + 1)
-            }
-        }
-    }
-    
-    func attemptLightsOnWithScene(sceneId: String) {
-        let reachability = Reachability.reachabilityForInternetConnection()
-        reachability.startNotifier()
-        attemptLightsOnWithScene(sceneId, reachability: reachability, attempt: 0)
-    }
-    
-
-    
     func turnOnLightsNowHome() {
         var imHomeScene = UserDefaultsWrapper.sharedInstance.imHomeLightScene
         if imHomeScene != nil {
-            attemptLightsOnWithScene(imHomeScene!)
+            setLightScene(imHomeScene!)
         }
     }
     
@@ -138,7 +111,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     @IBAction func imHomeButtonAction() {
         openDoor()
-        
         turnOnLightsNowHome()
 //        setCurrentViewToView(.HueControls)
     }
