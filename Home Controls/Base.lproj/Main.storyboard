@@ -2,13 +2,12 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="f6i-cG-Mpi">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Settings View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="SettingsViewController" customModule="Home_Controls" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="vXZ-lx-hvc" customClass="SettingsViewController" customModule="Home_Controls" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -17,57 +16,99 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open Door URL:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Est-Ea-6LD">
-                                <rect key="frame" x="16" y="64" width="576" height="37"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbh-tE-Yfc">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open Door URL:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Est-Ea-6LD">
+                                        <rect key="frame" x="18" y="10" width="564" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="d95-kj-9bg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oa0-Op-igD">
+                                        <rect key="frame" x="18" y="48" width="564" height="40"/>
+                                        <color key="backgroundColor" red="0.96746949815837935" green="0.96746949815837935" blue="0.96746949815837935" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="1JK-J8-vgZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Controls API URL:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKP-ds-xYd">
+                                        <rect key="frame" x="18" y="106" width="191" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="vIg-Xh-bqH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I3t-3U-aNZ">
+                                        <rect key="frame" x="18" y="152" width="564" height="40"/>
+                                        <color key="backgroundColor" red="0.96746949820000006" green="0.96746949820000006" blue="0.96746949820000006" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ghe-BF-lSB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3GT-rF-eyu">
+                                        <rect key="frame" x="18" y="210" width="564" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="oMf-sg-ZR7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IPP-Xp-Gaj">
+                                        <rect key="frame" x="18" y="256" width="564" height="40"/>
+                                        <color key="backgroundColor" red="0.96746949820000006" green="0.96746949820000006" blue="0.96746949820000006" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="f8Q-bg-HMe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="9HF-O0-Wgc"/>
+                                    <constraint firstItem="gKP-ds-xYd" firstAttribute="top" secondItem="Oa0-Op-igD" secondAttribute="bottom" constant="18" id="2cQ-0R-qkc"/>
+                                    <constraint firstItem="I3t-3U-aNZ" firstAttribute="top" secondItem="gKP-ds-xYd" secondAttribute="bottom" constant="8" symbolic="YES" id="3xq-DQ-zzy"/>
+                                    <constraint firstItem="3GT-rF-eyu" firstAttribute="trailing" secondItem="I3t-3U-aNZ" secondAttribute="trailing" id="5Ih-eB-a6X"/>
+                                    <constraint firstItem="IPP-Xp-Gaj" firstAttribute="top" secondItem="3GT-rF-eyu" secondAttribute="bottom" constant="8" symbolic="YES" id="7QJ-iJ-X9G"/>
+                                    <constraint firstItem="Est-Ea-6LD" firstAttribute="top" secondItem="wbh-tE-Yfc" secondAttribute="top" constant="10" id="9V0-ei-Uc8"/>
+                                    <constraint firstItem="Est-Ea-6LD" firstAttribute="leading" secondItem="wbh-tE-Yfc" secondAttribute="leading" constant="18" id="FQc-sk-mtT"/>
+                                    <constraint firstItem="I3t-3U-aNZ" firstAttribute="centerX" secondItem="wbh-tE-Yfc" secondAttribute="centerX" id="Frt-gf-Ifp"/>
+                                    <constraint firstItem="I3t-3U-aNZ" firstAttribute="leading" secondItem="gKP-ds-xYd" secondAttribute="leading" id="IWV-x1-Pfd"/>
+                                    <constraint firstItem="3GT-rF-eyu" firstAttribute="top" secondItem="I3t-3U-aNZ" secondAttribute="bottom" constant="18" id="KHU-On-H57"/>
+                                    <constraint firstAttribute="bottom" secondItem="IPP-Xp-Gaj" secondAttribute="bottom" constant="252" id="KLP-wO-OLq"/>
+                                    <constraint firstItem="Oa0-Op-igD" firstAttribute="leading" secondItem="Est-Ea-6LD" secondAttribute="leading" id="Ks9-62-QkU"/>
+                                    <constraint firstItem="Oa0-Op-igD" firstAttribute="top" secondItem="Est-Ea-6LD" secondAttribute="bottom" id="aeT-f7-B27"/>
+                                    <constraint firstAttribute="trailing" secondItem="Est-Ea-6LD" secondAttribute="trailing" constant="18" id="dgs-EO-wBr"/>
+                                    <constraint firstItem="I3t-3U-aNZ" firstAttribute="leading" secondItem="3GT-rF-eyu" secondAttribute="leading" id="hxK-Qc-1BC"/>
+                                    <constraint firstItem="Oa0-Op-igD" firstAttribute="trailing" secondItem="I3t-3U-aNZ" secondAttribute="trailing" id="iVg-Y5-a5S"/>
+                                    <constraint firstItem="3GT-rF-eyu" firstAttribute="trailing" secondItem="IPP-Xp-Gaj" secondAttribute="trailing" id="jsC-je-k9P"/>
+                                    <constraint firstItem="IPP-Xp-Gaj" firstAttribute="leading" secondItem="3GT-rF-eyu" secondAttribute="leading" id="mAD-YD-LAt"/>
+                                    <constraint firstItem="gKP-ds-xYd" firstAttribute="leading" secondItem="Oa0-Op-igD" secondAttribute="leading" id="ma5-Xz-Xxg"/>
+                                    <constraint firstItem="Oa0-Op-igD" firstAttribute="top" secondItem="Est-Ea-6LD" secondAttribute="bottom" id="rxW-nO-7Fk"/>
+                                    <constraint firstItem="Est-Ea-6LD" firstAttribute="trailing" secondItem="Oa0-Op-igD" secondAttribute="trailing" id="tvr-UA-iqi"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oa0-Op-igD">
-                                <rect key="frame" x="16" y="109" width="568" height="46"/>
-                                <color key="backgroundColor" red="0.96746949815837935" green="0.96746949815837935" blue="0.96746949815837935" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="Gcx-W6-nt2"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKP-ds-xYd">
-                                <rect key="frame" x="16" y="175" width="576" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="mCF-mn-eAu"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I3t-3U-aNZ">
-                                <rect key="frame" x="16" y="220" width="568" height="46"/>
-                                <color key="backgroundColor" red="0.96746949820000006" green="0.96746949820000006" blue="0.96746949820000006" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="reh-q8-jjq"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="rxW-nO-7Fk"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Est-Ea-6LD" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="DYv-fN-ErN"/>
-                            <constraint firstItem="Oa0-Op-igD" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Hr6-dr-4D0"/>
-                            <constraint firstItem="I3t-3U-aNZ" firstAttribute="trailing" secondItem="Oa0-Op-igD" secondAttribute="trailing" id="JGD-la-9fW"/>
-                            <constraint firstItem="gKP-ds-xYd" firstAttribute="trailing" secondItem="Est-Ea-6LD" secondAttribute="trailing" id="SFd-P4-0GI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Est-Ea-6LD" secondAttribute="trailing" constant="-8" id="U7D-Zs-TPd"/>
-                            <constraint firstItem="gKP-ds-xYd" firstAttribute="top" secondItem="Oa0-Op-igD" secondAttribute="bottom" constant="20" id="e8y-wr-uVQ"/>
-                            <constraint firstItem="Oa0-Op-igD" firstAttribute="top" secondItem="Est-Ea-6LD" secondAttribute="bottom" constant="8" symbolic="YES" id="ggW-sq-bcg"/>
-                            <constraint firstItem="gKP-ds-xYd" firstAttribute="leading" secondItem="I3t-3U-aNZ" secondAttribute="leading" id="lVj-TS-Hev"/>
-                            <constraint firstItem="I3t-3U-aNZ" firstAttribute="top" secondItem="gKP-ds-xYd" secondAttribute="bottom" constant="8" symbolic="YES" id="n4c-ag-9qf"/>
-                            <constraint firstItem="Est-Ea-6LD" firstAttribute="leading" secondItem="Oa0-Op-igD" secondAttribute="leading" id="skJ-ZI-nK6"/>
-                            <constraint firstItem="gKP-ds-xYd" firstAttribute="leading" secondItem="Oa0-Op-igD" secondAttribute="leading" id="x3F-ER-xnV"/>
-                            <constraint firstItem="Oa0-Op-igD" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ylk-iZ-eT1"/>
+                            <constraint firstItem="wbh-tE-Yfc" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="64n-FA-nIk"/>
+                            <constraint firstAttribute="trailing" secondItem="wbh-tE-Yfc" secondAttribute="trailing" id="C8y-PQ-ZLp"/>
+                            <constraint firstItem="wbh-tE-Yfc" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="Muc-wd-BhG"/>
+                            <constraint firstItem="wbh-tE-Yfc" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="e9n-DM-LY0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xdc-Lh-fIg">
@@ -85,7 +126,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addressInput" destination="I3t-3U-aNZ" id="JYl-YH-2qv"/>
+                        <outlet property="homeAddressInput" destination="IPP-Xp-Gaj" id="I1v-4h-IdI"/>
+                        <outlet property="homeControlsUrlInput" destination="I3t-3U-aNZ" id="CDU-sl-oRu"/>
                         <outlet property="openDoorUrlInput" destination="Oa0-Op-igD" id="sBI-cI-dv2"/>
                     </connections>
                 </viewController>

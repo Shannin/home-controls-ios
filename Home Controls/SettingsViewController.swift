@@ -13,7 +13,8 @@ class SettingsViewController: UIViewController, CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     
     @IBOutlet var openDoorUrlInput: UITextField?
-    @IBOutlet var addressInput: UITextField?
+    @IBOutlet var homeControlsUrlInput: UITextField?
+    @IBOutlet var homeAddressInput: UITextField?
 
     override func viewDidLoad() {
         super.viewDidLoad()
