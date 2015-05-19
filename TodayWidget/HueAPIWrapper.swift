@@ -19,7 +19,10 @@ class HueAPIWrapper {
     var basePath: String?  // http://\(ip)/api/\(developerName)
     
     func updateVariables() {
-        self.basePath = "http://08cc1ba4.ngrok.io/lights"
+        var homeControlsAPIURL = UserDefaultsWrapper.sharedInstance.homeControlsAPIUrl
+        if homeControlsAPIURL != nil {
+            self.basePath = "\(homeControlsAPIURL)/lights"
+        }
     }
     
     

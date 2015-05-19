@@ -56,16 +56,16 @@ class UserDefaultsWrapper {
         }
     }
     
-    var hueIpAddress: String? {
+    var homeControlsAPIUrl: String? {
         set {
             if newValue != nil && !newValue!.isEmpty {
-                setUserDefault("hueIpAddress", value: newValue!)
+                setUserDefault("homeControlsAPIUrl", value: newValue!)
             } else {
-                removeUserDefaultForKey("hueIpAddress")
+                removeUserDefaultForKey("homeControlsAPIUrl")
             }
         }
         get {
-            return getUserDefaultForKey("hueIpAddress") as? String
+            return getUserDefaultForKey("homeControlsAPIUrl") as? String
         }
     }
     

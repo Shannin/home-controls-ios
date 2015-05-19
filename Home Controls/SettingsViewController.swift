@@ -20,7 +20,8 @@ class SettingsViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         
         self.openDoorUrlInput?.text = UserDefaultsWrapper.sharedInstance.openDoorURL
-        self.addressInput?.text = UserDefaultsWrapper.sharedInstance.homeAddress
+        self.homeControlsUrlInput?.text = UserDefaultsWrapper.sharedInstance.homeControlsAPIUrl
+        self.homeAddressInput?.text = UserDefaultsWrapper.sharedInstance.homeAddress
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -33,7 +34,8 @@ class SettingsViewController: UIViewController, CLLocationManagerDelegate {
         super.viewWillDisappear(animated)
         
         self.openDoorUrlInput?.resignFirstResponder()
-        self.addressInput?.resignFirstResponder()
+        self.homeControlsUrlInput?.resignFirstResponder()
+        self.homeAddressInput?.resignFirstResponder()
     }
     
     func setGeofenceForCoords(coords: CLLocationCoordinate2D) -> Bool {
@@ -83,10 +85,10 @@ class SettingsViewController: UIViewController, CLLocationManagerDelegate {
     
     
     @IBAction func updateButtonAction() {
-        var openDoorURL = self.openDoorUrlInput?.text
-        UserDefaultsWrapper.sharedInstance.openDoorURL = openDoorURL
+        UserDefaultsWrapper.sharedInstance.openDoorURL = self.openDoorUrlInput?.text
+        UserDefaultsWrapper.sharedInstance.homeControlsAPIUrl = self.homeControlsUrlInput?.text
         
-        var address: String? = self.addressInput != nil ? self.addressInput?.text : nil
+        var address: String? = self.homeAddressInput != nil ? self.homeAddressInput?.text : nil
         updateHomeGeofenceRegion(address, completion: { () -> Void in
             self.navigationController?.dismissViewControllerAnimated(true, completion: nil)
         })
