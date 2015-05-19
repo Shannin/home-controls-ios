@@ -12,7 +12,7 @@ class ScenesListTableViewController: UITableViewController {
     var optionKey: String?
     var maxScenes: Int = 1
     var optionValues: [String] = []
-    var scenes = [NSObject: AnyObject]()
+    var scenes: [[String: AnyObject]] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +30,7 @@ class ScenesListTableViewController: UITableViewController {
         }
     }
     
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -43,9 +44,10 @@ class ScenesListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
         
-        cell.textLabel?.text = "test"
+        let scene = self.scenes[indexPath.row]
+        cell.textLabel?.text = scene["name"] as? String
         
-        if contains(self.optionValues, "test") {
+        if contains(self.optionValues, scene["id"] as! String) {
             cell.accessoryType = .Checkmark
         } else {
             cell.accessoryType = .None
@@ -55,7 +57,7 @@ class ScenesListTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let sceneId = self.scenes.keys.array[indexPath.row] as! String
+        let sceneId = self.scenes[indexPath.row]["id"] as! String
         if contains(self.optionValues, sceneId) {
             // Remove from values array
             self.optionValues.removeAtIndex(find(self.optionValues, sceneId)!)

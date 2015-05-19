@@ -34,6 +34,7 @@
 		F76332AE1ADB722D00B1CBDC /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76332AD1ADB722D00B1CBDC /* TodayViewController.swift */; };
 		F76332B01ADB722D00B1CBDC /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F76332AF1ADB722D00B1CBDC /* MainInterface.storyboard */; };
 		F76332B31ADB722D00B1CBDC /* TodayWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F76332A61ADB722D00B1CBDC /* TodayWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F78F30CA1B09A4B6005C6F8B /* HueAPIWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79AD72A1ADD81D700FD426E /* HueAPIWrapper.swift */; };
 		F79AD72B1ADD81D700FD426E /* HueAPIWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79AD72A1ADD81D700FD426E /* HueAPIWrapper.swift */; };
 		F7A135461AEB600C002E7DB4 /* HueOptionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A135451AEB600C002E7DB4 /* HueOptionsTableViewController.swift */; };
 		F7B1DA361AEF3E1A00855808 /* UserDefaultsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B1DA351AEF3E1A00855808 /* UserDefaultsWrapper.swift */; };
@@ -433,6 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F78F30CA1B09A4B6005C6F8B /* HueAPIWrapper.swift in Sources */,
 				F749BAF61ADC2DA400DA6028 /* DDLog.m in Sources */,
 				F749BAF21ADC2DA400DA6028 /* DDASLLogger.m in Sources */,
 				F76332851ADB721600B1CBDC /* SettingsViewController.swift in Sources */,

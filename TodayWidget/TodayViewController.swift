@@ -112,7 +112,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     @IBAction func imHomeButtonAction() {
         openDoor()
         turnOnLightsNowHome()
-//        setCurrentViewToView(.HueControls)
+        setCurrentViewToView(.HueControls)
     }
     
     func turnLightsOnWithSceneIndex(id: UIButton?) {

@@ -11,9 +11,14 @@ import UIKit
 class HueOptionsTableViewController: UITableViewController {
     
     var availableOptions: [[String: AnyObject]] = [["key": "ImHomeLightScene", "string": "I'm Home Scene", "max_scenes": 1], ["key": "HueControlsScenes", "string": "Hue Controls", "max_scenes": 4]]
+    var hueScenes: [[String:AnyObject]]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        HueAPIWrapper.sharedInstance.allScenes { (scenes, error) -> Void in
+            self.hueScenes = scenes
+        }
     }
     
 
@@ -52,6 +57,10 @@ class HueOptionsTableViewController: UITableViewController {
             var sceneListTableView = segue.destinationViewController as! ScenesListTableViewController
             
             var optionDetails = availableOptions[self.tableView.indexPathForSelectedRow()!.row]
+            
+            if self.hueScenes != nil {
+                sceneListTableView.scenes = self.hueScenes!
+            }
             sceneListTableView.optionKey = optionDetails["key"] as? String
             sceneListTableView.maxScenes = optionDetails["max_scenes"] as! Int
         }

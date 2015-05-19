@@ -19,12 +19,40 @@ class HueAPIWrapper {
     var basePath: String?  // http://\(ip)/api/\(developerName)
     
     func updateVariables() {
-        self.basePath = "http://c75e0899.ngrok.io/lights"
+        self.basePath = "http://08cc1ba4.ngrok.io/lights"
     }
     
     
     init() {
         updateVariables();
+    }
+    
+    func allScenes(completion: (scenes: [[String: AnyObject]]?, error: HueAPIError?) -> Void) {
+        if self.basePath == nil {
+            completion(scenes: nil, error: .noHubSelected)
+            return
+        }
+        
+        let urlPath = "\(basePath!)/scenes"
+        
+        var err: NSError?
+        var url: NSURL = NSURL(string: urlPath)!
+        var request: NSMutableURLRequest = NSMutableURLRequest(URL: url)
+        request.HTTPMethod = "GET"
+        
+        let queue:NSOperationQueue = NSOperationQueue()
+        NSURLConnection.sendAsynchronousRequest(request, queue: queue, completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+            var err: NSError?
+            var jsonData: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err)
+            
+            dispatch_sync(dispatch_get_main_queue(), { () -> Void in
+                if err != nil {
+                    completion(scenes: nil, error: .somethingWentWrong)
+                } else {
+                    completion(scenes: jsonData as? [[String: AnyObject]], error: nil)
+                }
+            })
+        })
     }
     
     func setAllLightsToScene(sceneId: String, completion: (on: Bool, error: HueAPIError?) -> Void) {
@@ -43,14 +71,16 @@ class HueAPIWrapper {
         let queue:NSOperationQueue = NSOperationQueue()
         NSURLConnection.sendAsynchronousRequest(request, queue: queue, completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
             var err: NSError?
-            var response: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err)
-            println("Turn on lights: \(response), \(err)")
+            var jsonData: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err)
+            println("Turn on lights: \(jsonData), \(err)")
             
-            if err != nil {
-                completion(on: false, error: .somethingWentWrong)
-            } else {
-                completion(on: true, error: nil)
-            }
+            dispatch_sync(dispatch_get_main_queue(), { () -> Void in
+                if err != nil {
+                    completion(on: false, error: .somethingWentWrong)
+                } else {
+                    completion(on: true, error: nil)
+                }
+            })
         })
     }
     
