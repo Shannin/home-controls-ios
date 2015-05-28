@@ -21,7 +21,7 @@ class HueAPIWrapper {
     func updateVariables() {
         var homeControlsAPIURL = UserDefaultsWrapper.sharedInstance.homeControlsAPIUrl
         if homeControlsAPIURL != nil {
-            self.basePath = "\(homeControlsAPIURL)/lights"
+            self.basePath = "\(homeControlsAPIURL!)/lights"
         }
     }
     
