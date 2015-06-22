@@ -10,6 +10,7 @@ import UIKit
 import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
+    @IBOutlet var viewsContainer: UIScrollView?
     @IBOutlet var imHomeContainer: UIView?
     @IBOutlet var imHomeButton: UIButton?
     
@@ -28,7 +29,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var currentView: TodayWidgetAvailableViews = UserDefaultsWrapper.sharedInstance.todayWidgetCurrentView
+//        var currentView: TodayWidgetAvailableViews = UserDefaultsWrapper.sharedInstance.todayWidgetCurrentView
+        var currentView: TodayWidgetAvailableViews = .ImHome
         setCurrentViewToView(currentView)
     }
     
@@ -43,21 +45,17 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     func setCurrentViewToView(view: TodayWidgetAvailableViews) {
-        self.imHomeContainer?.hidden = true
-        self.imHomeContainer?.userInteractionEnabled = false
-        self.hueControlsContainer?.hidden = true
-        self.hueControlsContainer?.userInteractionEnabled = false
+        var w = self.viewsContainer!.frame.width
         
         if view == .ImHome {
-            self.imHomeContainer?.hidden = false
-            self.imHomeContainer?.userInteractionEnabled = true
+            self.preferredContentSize = CGSizeMake(w, 90)
+            self.viewsContainer?.scrollRectToVisible(CGRectMake(0, 0, w, 90), animated: true)
         } else if view == .HueControls {
-            self.hueControlsContainer?.hidden = false
-            self.hueControlsContainer?.userInteractionEnabled = true
+            self.preferredContentSize = CGSizeMake(w, 140)
+            self.viewsContainer?.scrollRectToVisible(CGRectMake(0, 90, w, 90), animated: true)
             self.layoutCurrentLightOptions()
         }
         
-        self.preferredContentSize = CGSizeMake(320, 100)
         
         UserDefaultsWrapper.sharedInstance.todayWidgetCurrentView = view
     }
