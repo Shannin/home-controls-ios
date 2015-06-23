@@ -46,8 +46,42 @@
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68H-oJ-A09">
                                         <rect key="frame" x="0.0" y="90" width="320" height="140"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMW-rS-HLc">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHa-nW-0R0">
+                                                        <rect key="frame" x="8" y="8" width="60" height="36"/>
+                                                        <color key="backgroundColor" red="0.74901960779999999" green="0.14117647059999999" blue="0.16078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="60" id="qB2-2p-0SC"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Door">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="52" id="4rU-Ze-WIM"/>
+                                                    <constraint firstItem="xHa-nW-0R0" firstAttribute="leading" secondItem="ZMW-rS-HLc" secondAttribute="leading" constant="8" id="7ZY-No-S8r"/>
+                                                    <constraint firstAttribute="bottom" secondItem="xHa-nW-0R0" secondAttribute="bottom" constant="8" id="esC-16-Tbg"/>
+                                                    <constraint firstItem="xHa-nW-0R0" firstAttribute="top" secondItem="ZMW-rS-HLc" secondAttribute="top" constant="8" id="j4u-Ew-Jxj"/>
+                                                </constraints>
+                                            </view>
+                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="beE-8p-GIL">
+                                                <rect key="frame" x="0.0" y="52" width="320" height="88"/>
+                                            </scrollView>
+                                        </subviews>
                                         <color key="backgroundColor" red="1" green="0.76078431369999999" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="ZMW-rS-HLc" secondAttribute="trailing" id="7Qn-n7-jq9"/>
+                                            <constraint firstAttribute="bottom" secondItem="beE-8p-GIL" secondAttribute="bottom" id="7rb-8y-Vww"/>
+                                            <constraint firstItem="beE-8p-GIL" firstAttribute="leading" secondItem="68H-oJ-A09" secondAttribute="leading" id="Ayz-0d-WbQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="beE-8p-GIL" secondAttribute="trailing" id="DTU-XN-vH3"/>
+                                            <constraint firstItem="ZMW-rS-HLc" firstAttribute="leading" secondItem="68H-oJ-A09" secondAttribute="leading" id="PK1-or-g62"/>
+                                            <constraint firstItem="beE-8p-GIL" firstAttribute="top" secondItem="ZMW-rS-HLc" secondAttribute="bottom" id="eku-0M-jgd"/>
+                                            <constraint firstItem="ZMW-rS-HLc" firstAttribute="top" secondItem="68H-oJ-A09" secondAttribute="top" id="hdx-0n-V2a"/>
                                             <constraint firstAttribute="height" constant="140" id="jUn-Ez-ZIr"/>
                                         </constraints>
                                     </view>
@@ -81,6 +115,8 @@
                         <outlet property="hueControlsContainer" destination="68H-oJ-A09" id="CqL-G2-Obl"/>
                         <outlet property="imHomeButton" destination="dcZ-ns-oNF" id="77Z-bo-4fE"/>
                         <outlet property="imHomeContainer" destination="SgM-Ee-DiY" id="eJZ-BZ-Lvm"/>
+                        <outlet property="lightsOptionsContainer" destination="beE-8p-GIL" id="srt-0Z-kRV"/>
+                        <outlet property="openDoorButton" destination="xHa-nW-0R0" id="lgZ-CC-rik"/>
                         <outlet property="viewsContainer" destination="Kag-wZ-6AY" id="vpM-1O-goB"/>
                     </connections>
                 </viewController>

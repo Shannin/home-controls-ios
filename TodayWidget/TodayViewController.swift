@@ -11,10 +11,16 @@ import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
     @IBOutlet var viewsContainer: UIScrollView?
+    
+    // I'm Home View
     @IBOutlet var imHomeContainer: UIView?
     @IBOutlet var imHomeButton: UIButton?
     
+    // Hue Lights View
     @IBOutlet var hueControlsContainer: UIView?
+    @IBOutlet var openDoorButton: UIButton?
+    @IBOutlet var lightsOptionsContainer: UIScrollView?
+    
     
     func userDefaultsChanged(notification: NSNotification) {
         
@@ -107,6 +113,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     // MARK:- Input Actions
     
+    @IBAction func openDoorButtonAction() {
+        openDoor()
+    }
+    
     @IBAction func imHomeButtonAction() {
         openDoor()
         turnOnLightsNowHome()
@@ -145,7 +155,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             return
         }
         
-        for v in self.hueControlsContainer!.subviews as! [UIView] {
+        for v in self.lightsOptionsContainer!.subviews as! [UIView] {
             v.removeFromSuperview()
         }
         
@@ -156,8 +166,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             btn.backgroundColor = UIColor.redColor()
             
             var f: CGRect = CGRect()
-            f.size.height = self.hueControlsContainer!.frame.size.height
-            f.size.width = self.hueControlsContainer!.frame.size.width / CGFloat(scenesArray.count)
+            f.size.height = self.lightsOptionsContainer!.frame.size.height
+            f.size.width = self.lightsOptionsContainer!.frame.size.width / CGFloat(scenesArray.count)
             f.origin.x = CGFloat(idx) * f.size.width
             f.origin.y = 0
             btn.frame = f
@@ -165,7 +175,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
             btn.tag = idx
             btn.addTarget(self, action: "turnLightsOnWithSceneIndex:", forControlEvents: .TouchUpInside)
             
-            self.hueControlsContainer!.addSubview(btn)
+            self.lightsOptionsContainer!.addSubview(btn)
         }
     }
     

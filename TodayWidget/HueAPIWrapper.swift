@@ -45,12 +45,20 @@ class HueAPIWrapper {
         
         let queue:NSOperationQueue = NSOperationQueue()
         NSURLConnection.sendAsynchronousRequest(request, queue: queue, completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+            if error != nil || data == nil {
+                dispatch_sync(dispatch_get_main_queue(), { () -> Void in
+                    completion(scenes: [], error: .somethingWentWrong)
+                })
+                
+                return
+            }
+            
             var err: NSError?
             var jsonData: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err)
             
             dispatch_sync(dispatch_get_main_queue(), { () -> Void in
                 if err != nil {
-                    completion(scenes: nil, error: .somethingWentWrong)
+                    completion(scenes: [], error: .somethingWentWrong)
                 } else {
                     completion(scenes: jsonData as? [[String: AnyObject]], error: nil)
                 }
@@ -73,6 +81,14 @@ class HueAPIWrapper {
         
         let queue:NSOperationQueue = NSOperationQueue()
         NSURLConnection.sendAsynchronousRequest(request, queue: queue, completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+            if error != nil || data == nil {
+                dispatch_sync(dispatch_get_main_queue(), { () -> Void in
+                    completion(on: false, error: .somethingWentWrong)
+                })
+                
+                return
+            }
+            
             var err: NSError?
             var jsonData: AnyObject? = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err)
             println("Turn on lights: \(jsonData), \(err)")
